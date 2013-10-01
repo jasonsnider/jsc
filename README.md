@@ -7,3 +7,12 @@ To use simply clone the repository as a CakePHP app directory.
 ````
 git clone git@github.com:jasonsnider/cakephp-plugins-app.git app
 ````
+
+You will want to make Cake/Cache and app/tmp writable by the server, I do this by changing ownership to the Apache 
+(www-data) process and the user group that is responsible for maintaining the web directories (jasonsnider). Server 
+paths, user and groups names will likely vary.
+
+````
+sudo chown www-data:jasonsnider /var/www/cake-plugins/lib/Cake/Cache -fR
+sudo chown www-data:jasonsnider /var/www/cake-plugins/app/tmp -fR
+````
