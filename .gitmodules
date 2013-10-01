@@ -7,9 +7,6 @@
 [submodule "Plugin/Users"]
 	path = Plugin/Users
 	url = git@github.com:jasonsnider/cakephp-users-plugin.git
-[submodule "PluginUtilities"]
-	path = Plugin/Utilities
-	url = git@github.com:jasonsnider/cakephp-utilities-plugin.git
 [submodule "Plugin/Utilities"]
 	path = Plugin/Utilities
 	url = git@github.com:jasonsnider/cakephp-utilities-plugin.git
