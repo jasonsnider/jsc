@@ -1,5 +1,5 @@
-[submodule "Vendors/HtmlPurifier"]
-	path = Vendors/HtmlPurifier
+[submodule "Vendor/HtmlPurifier"]
+	path = Vendor/HtmlPurifier
 	url = git://repo.or.cz/htmlpurifier.git
 [submodule "Plugin/AuditLog"]
 	path = Plugin/AuditLog
