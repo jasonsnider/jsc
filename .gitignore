@@ -1,9 +1,24 @@
-# User specific & automatically generated files #
-#################################################
-/tmp
+# ---------------------------------- General ----------------------------------
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
 
-# OS generated files #
-######################
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.buildpath
+nbproject
+thumbs.db
+.externalToolBuilders
 .DS_Store
 .DS_Store?
 ._*
@@ -12,4 +27,25 @@
 Icon?
 ehthumbs.db
 Thumbs.db
-/nbproject
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Folders to ignore
+.hg
+.svn
+publish
+.idea
+
+# build script local files
+build/buildinfo.properties
+build/config/buildinfo.properties
+
+# -------------------------------- Project Specific ---------------------------
+
+tmp
