@@ -4,3 +4,9 @@
 [submodule "Plugin/AuditLog"]
 	path = Plugin/AuditLog
 	url = git@github.com:jasonsnider/CakePHP-Audit-Log-Plugin.git
+[submodule "Plugin/Users"]
+	path = Plugin/Users
+	url = git@github.com:jasonsnider/cakephp-users-plugin.git
+[submodule "PluginUtilities"]
+	path = Plugin/Utilities
+	url = git@github.com:jasonsnider/cakephp-utilities-plugin.git

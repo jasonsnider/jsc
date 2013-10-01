@@ -16,7 +16,7 @@ paths, user and groups names will likely vary.
 sudo chown www-data:jasonsnider /var/www/cake-plugins/lib/Cake/Cache -fR
 sudo chown www-data:jasonsnider /var/www/cake-plugins/app/tmp -fR
 
-sudo chown www-data:jasonsnider /var/www/cake-plugins/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer  -fR
+sudo chown www-data:jasonsnider /var/www/cake-plugins/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer -fR
 ````
 
 Create a database called `cakephp_plugins` and the a username of root with the password of `password`. Since the goal
