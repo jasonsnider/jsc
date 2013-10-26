@@ -17,7 +17,6 @@
 .settings
 .buildpath
 nbproject
-nbproject/
 thumbs.db
 .externalToolBuilders
 .DS_Store
