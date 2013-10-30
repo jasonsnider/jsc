@@ -10,3 +10,6 @@
 [submodule "Plugin/Utilities"]
 	path = Plugin/Utilities
 	url = git@github.com:jasonsnider/cakephp-utilities-plugin.git
+[submodule "Plugin/Contents"]
+	path = Plugin/Contents
+	url = git@github.com:jasonsnider/cakephp-contents-plugin.git
