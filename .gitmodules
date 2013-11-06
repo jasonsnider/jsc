@@ -13,3 +13,6 @@
 [submodule "Plugin/Contents"]
 	path = Plugin/Contents
 	url = git@github.com:jasonsnider/cakephp-contents-plugin.git
+[submodule "View/Themed/Parbake"]
+	path = View/Themed/Parbake
+	url = git@github.com:jasonsnider/cakephp-parbake-theme.git
