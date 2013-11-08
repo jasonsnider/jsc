@@ -108,3 +108,9 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+//Parbake configuration //[ToDo]: Make this part of a plugin or something
+/**
+ * Sets a projects default theme
+ */
+Configure::write('Parbake.Themed.default', 'Parbake');

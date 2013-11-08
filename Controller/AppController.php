@@ -36,6 +36,25 @@ class AppController extends Controller {
     /**
      * Set the default theme for the site
      */
-    public $theme = 'Parbake';
+    public $theme;
+    
+    /**
+     * Executes logic prior to the execution of the invoked action
+     * - Sets the theme to the value specified by the Configure class
+     * @return void
+     */
+    public function beforeRender() {
+        $this->setTheme();
+    }
+    
+    /**
+     * Sets the theme to a Configured value
+     * @return void
+     */
+    public function setTheme(){
+        if(Configure::check('Parbake.Themed.default')){
+            $this->theme = Configure::read('Parbake.Themed.default');
+        }
+    }
     
 }
