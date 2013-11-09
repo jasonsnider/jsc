@@ -16,3 +16,6 @@
 [submodule "View/Themed/Parbake"]
 	path = View/Themed/Parbake
 	url = git@github.com:jasonsnider/cakephp-parbake-theme.git
+[submodule "View/Themed/ParbakeBootstrap"]
+	path = View/Themed/ParbakeBootstrap
+	url = git@github.com:parbake/ParbakeBootstrap-theme.git
