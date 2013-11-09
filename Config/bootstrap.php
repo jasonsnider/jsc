@@ -113,4 +113,5 @@ CakeLog::config('error', array(
 /**
  * Sets a projects default theme
  */
-Configure::write('Parbake.Themed.default', 'Parbake');
+//Configure::write('Parbake.Themed.default', 'Parbake');
+Configure::write('Parbake.Themed.default', 'ParbakeBootstrap');
