@@ -1,11 +1,11 @@
-# jasonsnider.com
+# The Parbake Project
 
-The is the source code for jasonsnider.com; a web application built with CakePHP and various plugins.
+This is just a simple, common application for for working with CakePHP plugins.
  
 To use simply clone the repository as a CakePHP app directory.
 
 ````
-git clone git@github.com:jasonsnider/cakephp-plugins-app.git app
+git clone git@github.com:[user]/cakephp-plugins-app.git app
 ````
 
 You will want to make Cake/Cache and app/tmp writable by the server, I do this by changing ownership to the Apache 
@@ -13,10 +13,10 @@ You will want to make Cake/Cache and app/tmp writable by the server, I do this b
 paths, user and groups names will likely vary.
 
 ````
-sudo chown www-data:jasonsnider /var/www/jasonsnider.com/lib/Cake/Cache -fR
-sudo chown www-data:jasonsnider /var/www/jasonsnider.com/app/tmp -fR
+sudo chown www-data:[user] /var/www/[project]/lib/Cake/Cache -fR
+sudo chown www-data:[user] /var/www/[project]/app/tmp -fR
 
-sudo chown www-data:jasonsnider /var/www/jasonsnider.com/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer -fR
+sudo chown www-data:[user] /var/www/[project]/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer -fR
 ````
 
 Create a database called `cakephp_plugins` and the a username of root with the password of `password`. Since the goal
