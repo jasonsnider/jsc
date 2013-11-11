@@ -67,7 +67,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'password',
-		'database' => 'cakephp_plugins',
+		'database' => 'parbake',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
@@ -78,7 +78,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'password',
-		'database' => 'test_cakephp_plugins',
+		'database' => 'parbake_test',
 		'prefix' => '',
 		//'encoding' => 'utf8',
 	);
