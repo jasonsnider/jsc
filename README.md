@@ -35,5 +35,5 @@ sudo chown www-data:some-user /var/www/my-project/app/tmp -fR
 sudo chown www-data:some-user /var/www/my-project/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer -fR
 ````
 
-Create a database called `cakephp_plugins` and the a username of root with the password of `password`. Since the goal
-of this application is to help with the local development of CakePHP plugins, I'm not worried about security.
+Create a database called `parbake` and the a username of `root` with the password of `password`. Please note these are 
+simple default settings and are for local development only, for production you MUST change these values.
