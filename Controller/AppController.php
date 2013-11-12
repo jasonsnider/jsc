@@ -43,7 +43,7 @@ class AppController extends Controller {
      * - Sets the theme to the value specified by the Configure class
      * @return void
      */
-    public function beforeRender() {
+    public function beforeFilterr() {
         $this->setTheme();
     }
     
