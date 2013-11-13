@@ -1,0 +1,169 @@
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	margin: 0 0 .25em;
+}
+
+h1 > a,
+h1 > a:link,
+h1 > a:hover,
+h1 > a:visited{
+	color: #630;
+	text-decoration: none;
+}
+
+html{}
+
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	color: #663300;
+	padding: 0;
+	margin: 0;
+ 	background: #f3e7d3;
+}
+
+#Wrapper{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#Header{
+	position: fixed;
+	background: rgba(187, 68, 0, 0.8);
+	color: #efd;
+	width: 800px;
+}
+
+.brand{
+	font-family: 'Inder', sans-serif;
+}
+
+nav a{
+	font-family: 'Cabin Sketch', sans-serif;
+	font-size: 24px;
+	line-height: 50px;
+	color: #efd;
+	padding-left: 1em;
+	text-decoration: none;
+}
+
+nav:last-child{
+	padding-right: 1em;
+}
+
+#Content{
+	padding: 60px 0 0;
+}
+
+article > footer{
+	margin: 1em 0;	
+}
+
+article > footer,
+article > footer > a,
+article > footer > a:link,
+article > footer > a:hover,
+article > footer > a:visited{
+	background: #630;
+	color: #efd;
+	padding: .5em;
+}
+
+article > footer > a:hover{
+	text-decoration: underline;
+}
+
+#Footer{
+	color: #f3e7d3;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+
+	padding: 1em;
+	background: #740;
+}
+
+#Footer2{
+	color: #f3e7d3;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+
+	padding: 1em;
+	background: #630;
+}
+
+.message{
+    background:#ccc;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 2.5em;
+    color: #fff;
+}
+
+.success-message{
+    background:#080;
+}
+
+.warning-message{
+    background:#fb3;
+}
+
+.error-message{
+    background:#b00;
+}
+
+.button-row{
+	padding: .5em;
+	background: #630;
+	margin:0 0 .5em;
+}
+
+.button-row a,
+.button-row a:link,
+.button-row a:hover,
+.button-row a:visited{
+	color: #f3e7d3;
+	text-decoration: none;
+}
+
+#PostForm label{
+    display: block;
+}
+
+#PostForm input[type="text"],
+#PostForm input[type="password"],
+#PostForm textarea{
+    width: 100%;
+    padding: .5em;
+    border: 1px solid #630;
+    margin: 0 0 1em;
+}
+
+#LoginForm{
+    width: 400px;
+    margin: 0 auto;
+}
+
+#LoginForm label{
+    display: block;
+}
+
+#LoginForm input[type="text"],
+#LoginForm input[type="password"]{
+    width: 100%;
+    padding: .5em;
+    border: 1px solid #630;
+    margin: 0 0 1em;
+}
+
+
+form div.submit{
+    margin: 0 0 1em;
+    text-align: right;
+}
+
+form div.submit input[type="submit"]{
+    display: inline-block;
+    padding: .8em;
+}

@@ -37,26 +37,26 @@ endif;
 <p>
 <?php
 	if (version_compare(PHP_VERSION, '5.2.8', '>=')):
-		echo '<span class="notice success">';
+		echo '<div class="alert alert-success">';
 			echo __d('cake_dev', 'Your version of PHP is 5.2.8 or higher.');
-		echo '</span>';
+		echo '</div>';
 	else:
-		echo '<span class="notice">';
+		echo '<div class="alert alert-warning">';
 			echo __d('cake_dev', 'Your version of PHP is too low. You need PHP 5.2.8 or higher to use CakePHP.');
-		echo '</span>';
+		echo '</div>';
 	endif;
 ?>
 </p>
 <p>
 	<?php
 		if (is_writable(TMP)):
-			echo '<span class="notice success">';
+			echo '<div class="alert alert-success">';
 				echo __d('cake_dev', 'Your tmp directory is writable.');
-			echo '</span>';
+			echo '</div>';
 		else:
-			echo '<span class="notice">';
+			echo '<div class="alert alert-warning">';
 				echo __d('cake_dev', 'Your tmp directory is NOT writable.');
-			echo '</span>';
+			echo '</div>';
 		endif;
 	?>
 </p>
@@ -64,13 +64,13 @@ endif;
 	<?php
 		$settings = Cache::settings();
 		if (!empty($settings)):
-			echo '<span class="notice success">';
+			echo '<div class="alert alert-success">';
 				echo __d('cake_dev', 'The %s is being used for core caching. To change the config edit %s', '<em>'. $settings['engine'] . 'Engine</em>', 'APP/Config/core.php');
-			echo '</span>';
+			echo '</div>';
 		else:
-			echo '<span class="notice">';
+			echo '<div class="alert alert-warning">';
 				echo __d('cake_dev', 'Your cache is NOT working. Please check the settings in %s', 'APP/Config/core.php');
-			echo '</span>';
+			echo '</div>';
 		endif;
 	?>
 </p>
@@ -78,16 +78,16 @@ endif;
 	<?php
 		$filePresent = null;
 		if (file_exists(APP . 'Config' . DS . 'database.php')):
-			echo '<span class="notice success">';
+			echo '<div class="alert alert-success">';
 				echo __d('cake_dev', 'Your database configuration file is present.');
 				$filePresent = true;
-			echo '</span>';
+			echo '</div>';
 		else:
-			echo '<span class="notice">';
+			echo '<div class="alert alert-warning">';
 				echo __d('cake_dev', 'Your database configuration file is NOT present.');
 				echo '<br/>';
 				echo __d('cake_dev', 'Rename %s to %s', 'APP/Config/database.php.default', 'APP/Config/database.php');
-			echo '</span>';
+			echo '</div>';
 		endif;
 	?>
 </p>
@@ -110,15 +110,15 @@ if (isset($filePresent)):
 <p>
 	<?php
 		if ($connected && $connected->isConnected()):
-			echo '<span class="notice success">';
+			echo '<div class="alert alert-success">';
 				echo __d('cake_dev', 'Cake is able to connect to the database.');
-			echo '</span>';
+			echo '</div>';
 		else:
-			echo '<span class="notice">';
+			echo '<div class="alert alert-warning">';
 				echo __d('cake_dev', 'Cake is NOT able to connect to the database.');
 				echo '<br /><br />';
 				echo $errorMsg;
-			echo '</span>';
+			echo '</div>';
 		endif;
 	?>
 </p>
@@ -126,26 +126,26 @@ if (isset($filePresent)):
 <?php
 	App::uses('Validation', 'Utility');
 	if (!Validation::alphaNumeric('cakephp')):
-		echo '<p><span class="notice">';
+		echo '<p><div class="alert alert-warning">';
 			echo __d('cake_dev', 'PCRE has not been compiled with Unicode support.');
 			echo '<br/>';
 			echo __d('cake_dev', 'Recompile PCRE with Unicode support by adding <code>--enable-unicode-properties</code> when configuring');
-		echo '</span></p>';
+		echo '</div></p>';
 	endif;
 ?>
 
 <p>
 	<?php
 		if (CakePlugin::loaded('DebugKit')):
-			echo '<span class="notice success">';
+			echo '<div class="alert alert-success">';
 				echo __d('cake_dev', 'DebugKit plugin is present');
-			echo '</span>';
+			echo '</div>';
 		else:
-			echo '<span class="notice">';
+			echo '<div class="alert alert-warning">';
 				echo __d('cake_dev', 'DebugKit is not installed. It will help you inspect and debug different aspects of your application.');
 				echo '<br/>';
 				echo __d('cake_dev', 'You can install it from %s', $this->Html->link('github', 'https://github.com/cakephp/debug_kit'));
-			echo '</span>';
+			echo '</div>';
 		endif;
 	?>
 </p>

@@ -1,0 +1,116 @@
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+	*zoom: 1;
+}
+
+/* Global */
+.center{
+	text-align: center;
+}
+
+.circle{
+	border-radius: 50%;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+/* GRID */
+
+.three-quarter{
+	float: left;
+	width: 25%;
+}
+
+
+.half{
+	float: left;
+	width: 50%;
+}
+
+.half-pad-right{
+	float: left;
+	width: 50%;
+	padding-right: 8px;
+}
+
+.half-pad-left{
+	float: left;
+	width: 50%;
+	padding-left: 8px;
+}
+
+.quarter{
+	float: left;
+	width: 25%;
+}
+
+.eighth{
+	float: left;
+	width: 12.5%;
+}
+
+.sixteenth{
+	float: left;
+	width: 6.25%;
+}
+
+.two-third{
+	float: left;
+	width: 66.6666%;
+}
+
+.third{
+	float: left;
+	width: 33.3333%;
+}
+
+pre > code {
+	padding: 1.4em 1.4em 1.4em;
+	margin: 0;
+	display: block;
+	font-family: 'Source Code Pro', monospace;
+	font-size: 1em;
+	line-height: 1.4em;
+	color: #8db600;
+	background: #000;
+	overflow: auto;
+}

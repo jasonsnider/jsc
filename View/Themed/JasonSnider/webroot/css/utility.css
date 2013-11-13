@@ -1,0 +1,119 @@
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Open Sans', sans-serif;
+	padding: 0;
+	margin: 0 0 .25em;
+}
+
+html{}
+
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	color: #663300;
+	padding: 0;
+	margin: 0;
+ 	background: #f3e7d3;
+}
+
+#Wrapper{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#Header{
+	position: fixed;
+	background: rgba(187, 68, 0, 0.8);
+	color: #efd;
+	width: 800px;
+}
+
+.brand{
+	font-family: 'Inder', sans-serif;
+}
+
+nav a{
+	font-family: 'Cabin Sketch', sans-serif;
+	font-size: 24px;
+	line-height: 50px;
+	color: #efd;
+	padding-left: 1em;
+	text-decoration: none;
+}
+
+nav:last-child{
+	padding-right: 1em;
+}
+
+#Content{
+	padding: 60px 0 0;
+}
+
+section > footer{
+	background: #630;
+	margin: 1em 0;	
+}
+
+section > footer > a,
+section > footer > a:link,
+section > footer > a:hover,
+section > footer > a:visited{
+	color: #efd;
+	padding: .5em;
+	display: inline-block;
+}
+
+section > footer > a:hover{
+	text-decoration: underline;
+}
+
+textarea{
+	width: 100%;	
+}
+
+.submit{
+	text-align: right;
+	margin: .5em 0 1em;
+}
+
+input{
+	border: 1px solid #630;
+}
+
+input[type="submit"]{
+	color: #f3e7d3;
+	background: #740;
+	padding: .5em 1em;
+	font-weight: bold;
+}
+
+input[type="submit"]:hover{
+	color: #f3e7d3;
+	background: #630;
+	display: inline-block;
+}
+
+.display-password{
+	white-space: pre;
+	word-wrap:break-word;
+	border: 1px soild #630;
+	background: #fff;
+	padding: 1em;
+	margin:0 0 1em;
+}
+
+#Footer{
+	color: #f3e7d3;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	padding: 1em;
+	background: #740;
+}
+
+#Footer2{
+	color: #f3e7d3;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+
+	padding: 1em;
+	background: #630;
+}
