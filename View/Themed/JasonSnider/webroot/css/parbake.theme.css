@@ -1,0 +1,198 @@
+body {
+	font-size: 16px;
+	color: #663300;
+	padding: 0;
+	margin: 60px 0 0;
+ 	background: #f3e7d3;
+}
+
+.footer{
+    border-top: 1px solid #f5f5f5;
+    margin-top: 10px;
+    padding: 8px 0;
+}
+
+.error-message{
+    color: #b94a48;
+}
+
+.error label{
+    color: #b94a48;
+}
+
+.error input,
+.error textarea,
+.error select{
+    border: 1px solid #b94a48;
+}
+
+/*-------------------------------------------------*/
+#Header{
+	position: relative;
+	height: 550px;
+	background: url(/theme/jason_snider/img/jason-snider.jpg) no-repeat;
+    z-index: 100;
+}
+
+
+.title{
+	text-align: center;
+	font-family: 'Allan', Helvetica, Arial, sans-serif;
+	font-size:54px;
+	color:#FF9900;
+	text-shadow: 1px 1px #000;
+
+}
+
+.icons{
+	text-align: center;
+	position: absolute;
+	top:60px;
+	right:10px;
+	position:absolute;
+	padding: 12px;
+	width: 405px;
+}
+
+.icons a{
+	font-size: 32px;
+	color: #eeffdd;
+	background: rgba(187, 68, 0, 0.8);
+	line-height: 64px;
+	width: 64px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	opacity: .75;
+}
+
+.icons a:hover{
+	opacity: 1.0;
+}
+
+.profile{
+	font-family: 'Cardo', Georgia, Times, serif;
+	position: absolute;
+	top:200px;
+	right:10px;
+	position:absolute;
+	padding: 12px;
+	width: 405px;
+
+	background: #9BAB02;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+	-khtml-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+
+	opacity: .8;
+	filter: alpha(opacity=80) -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+
+	border-top-left-radius: 4px 4px;
+	border-top-right-radius: 4px 4px;
+	border-bottom-right-radius: 4px 4px;
+	border-bottom-left-radius: 4px 4px;
+}
+
+.bio{
+	color: white;
+	
+
+	font-size: 16px;
+	font-weight:bold;
+}
+
+nav{
+	padding: 0;
+	margin: 0;
+
+	position:relative;
+	width:100%;
+	background: rgba(187, 68, 0, 0.8);
+	height:45px;
+	top:505px;
+
+}
+
+nav a{
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 38px;
+	line-height: 45px;
+	color: #eeffdd;
+	text-decoration: none;
+	padding:0 .4em;
+}
+
+.stick{
+	position:fixed;
+	top:0px;
+}
+
+
+.tag-circle{
+	font-family: 'Rock Salt', cursive;
+	display: inline-block;
+	padding:4px;
+	margin: 0;
+	border-radius: 50%;
+	border: 1px dashed #f3e7d3;
+	background: #630;
+	box-shadow: 0 0 0 4px #630, 2px 1px 6px 4px #f3e7d3;
+}
+
+.tag{
+	font-family: 'Rock Salt', cursive;
+	display: inline-block;
+	
+	padding:2px 16px;
+	margin: 7px;
+
+	background: #630;
+	color: #f3e7d3;
+	font-size: 12px;
+	font-weight: bold;
+	border: 1px dashed #f3e7d3;
+	box-shadow: 0 0 0 4px #630, 2px 1px 6px 4px #f3e7d3;
+	font-weight: normal;
+	text-align: center;
+}
+
+.footer{
+	color: #f3e7d3;
+	padding: 1em;
+	background: #740;
+}
+
+.sub-footer{
+	color: #f3e7d3;
+	padding: 1em;
+	background: #630;
+}
+
+/*---------------------- OVERRIDE BOOTSTRAP ---------------------*/
+.navbar-default {
+    background: rgba(187, 68, 0, 0.8);
+    border-color: #e7e7e7;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color: #fff;
+}
+.navbar-default .navbar-nav>.dropdown>a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+/*
+padding: 0;
+margin: 0;
+position: relative;
+width: 100%;
+background: rgba(187, 68, 0, 0.8);
+height: 45px;
+top: 505px;
+*/
