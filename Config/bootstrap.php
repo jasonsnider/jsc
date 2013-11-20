@@ -71,13 +71,7 @@ Cache::config('default', array('engine' => 'File'));
  * CakePlugin::load('DebugKit'); //Loads a single plugin named DebugKit
  *
  */
-CakePlugin::loadAll(
-    array(
-        'Utilities'=>array(
-            'bootstrap'=>true
-        )
-    )
-);
+CakePlugin::loadAll();
 
 /**
  * You can attach event listeners to the request lifecycle as Dispatcher Filter. By default CakePHP bundles two filters:
@@ -114,3 +108,6 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+//include the parbake configuration file
+require_once APP . 'Config' . DS . 'parbake.php';
