@@ -39,12 +39,40 @@ class AppController extends Controller {
     public $theme;
     
     /**
+     * Calls the application wide components
+     * @var array $components
+     */
+    public $components = array(
+        'Auth' => array(
+            //Force a central login (1 login per prefix by default).
+            'loginAction' => array(
+                'admin' => false,
+                'plugin' => 'users',
+                'controller' => 'users',
+                'action' => 'login'
+            ),
+            'authError' => 'You are not allowed to do that.',
+            'authenticate' => array(
+                'Form' => array(
+                    'fields' => array(
+                        'username' => 'username',
+                        'password' => 'hash'
+                    )
+                )
+            )
+        ),
+        'Users.Authorize',
+        'Security',
+        'Session'
+    );
+    
+    /**
      * Executes logic prior to the execution of the invoked action
      * - Sets the theme to the value specified by the Configure class
      * @return void
      */
-    public function beforeFilterr() {
-        $this->setTheme();
+    public function beforeFilter() {
+        $this->setTheme(); 
     }
     
     /**
@@ -55,6 +83,35 @@ class AppController extends Controller {
         if(Configure::check('Parbake.Themed.default')){
             $this->theme = Configure::read('Parbake.Themed.default');
         }
-    }
-    
+
+        //Set path segments to allow for easy reuse and improved readability
+        $root = 'Parbake.Themed.Controller';
+        $controller = $this->request->controller;
+        $action = $this->request->action;
+        
+        //Check the config file for controller specific themes
+        if(Configure::check('Parbake.Themed.Controller')){
+            //Is the current controller named?
+            if(array_key_exists($controller, Configure::read($root))){
+                //Is the current action named
+                if(array_key_exists($action, Configure::read("{$root}.{$controller}"))){
+                        
+                        //Set the theme and layout paths for easy reuse and improved readability
+                        $themePath = "{$root}.{$controller}.{$action}.theme";
+                        $layoutPath = "{$root}.{$controller}.{$action}.layout";
+                        
+                        //Set the controller/action specific theme
+                        if(Configure::check($themePath)){
+                            $this->theme = Configure::read($themePath);
+                        }
+                        
+                        //Set the controller/action specific layout
+                        if(Configure::check($layoutPath)){
+                            $this->layout = Configure::read($layoutPath);
+                        }
+                  
+                }
+            }
+        }
+    }    
 }
