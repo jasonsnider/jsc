@@ -19,3 +19,6 @@
 [submodule "View/Themed/ParbakeBootstrap"]
 	path = View/Themed/ParbakeBootstrap
 	url = git@github.com:parbake/ParbakeBootstrap-theme.git
+[submodule "Config"]
+	path = Config
+	url = git@github.com:parbake/Config.git
