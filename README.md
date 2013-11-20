@@ -1,11 +1,9 @@
 # The Parbake Project
 
-The Parbake Project is a collection of plugins and themes for CakePHP. At the core of the project is three plugins 
-Utilities, Users and Content; and two themes Parbake and BootstrapParbake. This repository (parbake) provides a simple 
-common application (or I suppose you could look at it as a configuration) for working with these as well as other FOSS
-and CakePHP community plugins out of the box. You may use this app as a quick start or use the plugins on an as needed
-basis.
- 
+The Parbake Project is CakePHP application comprised of a central app as well as collection of plugins, themes and
+vendor libraries. Each plugin, theme and vendor library is pulled into the project using git submodules. This allows
+the developer to control the level of continual integration. 
+
 To use this as a quick start, simply clone the repository as a CakePHP app directory. 
 
 The following assumes your creating a project called my-project at /var/www adjust these paths and names accordingly. 
