@@ -73,6 +73,7 @@ class AppController extends Controller {
      */
     public function beforeFilter() {
         $this->setTheme(); 
+        $this->request->isEmployee = $this->isEmployee();
     }
     
     /**
@@ -114,4 +115,16 @@ class AppController extends Controller {
             }
         }
     }    
+    
+    /**
+     * Returns true if a user is an employee and/or root user.
+     * @return boolean
+     */
+    function isEmployee(){
+        $user = $this->Session->read('Auth.User');
+        if($user['root'] || $user['employee']){
+            return true;
+        }
+        return false;
+    }
 }
