@@ -35,3 +35,36 @@ sudo chown www-data:some-user /var/www/my-project/app/Vendor/HtmlPurifier/librar
 
 Create a database called `parbake` and the a username of `root` with the password of `password`. Please note these are 
 simple default settings and are for local development only, for production you MUST change these values.
+
+## Request Object Extensions
+
+$checkForMeta - When this is set to true in a given action, the view of that action will make available a control 
+element that will allow a user to manage the meta data of a given page. That page will then know it is to try and 
+retrieve it's meta data. This is only intended for pages of a static nature. Pages created using CMS tools, such as a 
+post or anything that retrieves data using some kind of a token (slug,id, etc) can manage it's own met data as part
+of the CMS functionality.
+
+Usage
+````
+# Set
+$this->request->checkForMeta = true;
+
+# Get
+if($this->request->isEmployee){
+    # Do something
+}
+````
+
+$isEmployee - A boolean value that determines is a logged in user has any level of employee privs, if so additional UI
+elements will be made available to that user.
+
+Usage
+````
+# Set
+$this->request->isEmployee = $this->isEmployee();
+
+# Get
+if($this->request->isEmployee){
+    # Do something
+}
+````
