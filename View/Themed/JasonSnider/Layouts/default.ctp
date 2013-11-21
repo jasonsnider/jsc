@@ -52,25 +52,8 @@
                     </div>
                 </div>
             </div>
-            
-            <?php if($this->request->isEmployee): ?>
-                <?php if(!empty($this->request->checkForMeta)): ?>
-                    <?php 
-                    echo $this->Html->link(
-                        'Manage Meta Data',
-                        array(
-                            'admin'=>true,
-                            'controller'=>'meta_data',
-                            'action'=>'edit',
-                            $this->request->controller,
-                            $this->request->action
-                        )
-
-                    ); 
-                    ?>
-                <?php endif; ?>
-            <?php endif; ?>
-            
+       
+            <?php echo $this->element('management_panel'); ?>
             <?php echo $this->element('sql_dump'); ?>
             
         </div>

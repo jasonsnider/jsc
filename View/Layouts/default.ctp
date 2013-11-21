@@ -39,6 +39,7 @@
                 );
             ?>
             </div>
+            <?php echo $this->element('management_panel'); ?>
             <?php echo $this->element('sql_dump'); ?>
             
         </div>
