@@ -46,7 +46,6 @@
         <?php echo $this->Html->script('jquery/jquery'); ?>
         <?php echo $this->Html->script('bootstrap.min'); ?>
         <?php echo $this->element('tinymce'); ?>
-
         
     </body>
 </html>
