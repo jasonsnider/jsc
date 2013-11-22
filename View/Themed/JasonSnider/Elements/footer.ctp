@@ -11,8 +11,8 @@
         <?php echo $this->Html->link(
                 $this->Html->image('cake.power.gif', 
                 array(
-                    'alt' => $cakeDescription, 
-                    'title'=> $cakeDescription,
+                    'alt' => 'CakePHP: the rapid development php framework', 
+                    'title'=> 'CakePHP: the rapid development php framework',
                     'border' => '0')),
                 'http://www.cakephp.org/',
                 array('target' => '_blank', 'escape' => false)
