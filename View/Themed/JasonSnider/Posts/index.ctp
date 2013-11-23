@@ -11,8 +11,8 @@
                 ); 
             ?>
             </h2>
-            <strong>By: </strong><?php echo $data[$i]['CreatedUser']['username']; ?>
-            <strong>On: </strong><?php echo date('m/d/y', strtotime($data[$i]['CreatedUser']['created'])); ?>
+            <strong>By: </strong><?php echo $data[$i]['CreatedUser']['UserProfile']['display_name']; ?>
+            <strong>On: </strong><?php echo date('m/d/y', strtotime($data[$i]['Content']['created'])); ?>
         </header>
         <?php echo $data[$i]['Content']['body']; ?>
     </article>
