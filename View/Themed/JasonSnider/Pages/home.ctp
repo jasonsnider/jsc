@@ -1,52 +1,7 @@
-<section class="row">
-    <div class="col-md-6">
-        <h2 id="AboutMe">About Jason Snider</h2>
-        <p>
-                I'm a full stack web developer,
-                a systems architect,
-                a Linux aficionado,
-                an open source advocate,
-                a sys admin and security enthusiast.
-                I'm a senior developer at MicroTrain Technologies
-                and the lead developer for TheProfessional.Me. 
-        </p>
-    </div>
-    
-    <div class="col-md-6">
-        <h2>I am what I code</h2>
-        <p>You can learn alot about a developer from source code and documentation. Learn about me by checking out the inner workings of jasonsnider.com.</p>
-        
-        <div class="row">
-            <div class="col-md-6">
-                <div class="box">
-                    <small>Read the</small> DOCS<br>
-                    <a href="/docs/api">API</a> |
-                    <a href="/docs/phpunit">Unit Tests</a>   
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="box">
-                    <small>View the</small> SOURCE<br>
-                    <a href="https://github.com/jasonsnider/jasonsnider.com">on GitHub</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
+<div>&nbsp;</div>
 <section class="row">
 
-    <div class="col-md-4">
-        <img 
-            class="tag-circle"
-            height="256" 
-            width="256"
-            alt="Jason Snider"
-            src="/theme/jason_snider/img/57dd069b73a149098c4865f8f5813303.jpeg"> 
-    </div>
-
-    <div class="col-md-8">
+    <div class="col-md-12">
         <h2 id="Background">Full Stack Web Developer and Architect</h2>
         <p>
         A products success depends on the full stack, the better each piece is understood, the 
@@ -74,7 +29,8 @@
         <div class="tag">SSH</div>
         <div class="tag">SSL</div>
         <div class="tag">GitHub</div>
-
+        <div class="tag">OpenStack</div>
+        <div class="tag">DigitalOcean</div>
     </div>
 </section>
 
