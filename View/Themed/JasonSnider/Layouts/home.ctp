@@ -36,8 +36,10 @@
         <?php //echo $this->element('navbar'); ?>
 
         <div class="container">
-            
             <div id="Header">
+                <div style="position:absolute; top: 10px; width: 100%;">
+                    <?php echo $this->Session->flash(); ?>
+                </div>
 				<div class="icons">
 					<!--<a href="https://theprofessional.me/p/jason/" class="XXX"></a>-->
 
