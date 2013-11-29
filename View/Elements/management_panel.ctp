@@ -1,8 +1,18 @@
+<?php if($this->request->isEmployee): ?>
+<div class="management-panel">       
 <?php 
-if($this->request->isEmployee): 
-    
+    echo $this->Html->link(
+        'Admin',
+        array(
+            'admin'=>true,
+            'controller'=>'pages',
+            'action'=>'admin'
+        )
+
+    ); 
+
     if(!empty($this->request->checkForMeta)):
-        
+        echo ' | ';
         echo $this->Html->link(
             'Manage Meta Data',
             array(
@@ -16,8 +26,9 @@ if($this->request->isEmployee):
         ); 
 
     endif;
-
+    
     if($this->request->controller == 'posts' && $this->request->action == 'view'):
+        echo ' | ';
         echo $this->Html->link(
             'Manage This Post',
             array(
@@ -30,7 +41,10 @@ if($this->request->isEmployee):
         ); 
     endif;
 
+
+    
     if($this->request->controller == 'pages' && $this->request->action == 'view'):
+        echo ' | ';
         echo $this->Html->link(
             'Manage This Page',
             array(
@@ -43,4 +57,10 @@ if($this->request->isEmployee):
         ); 
     endif;
     
-endif; 
+    if ($this->Session->check('Auth.User')):
+        echo ' | ';
+        echo $this->Html->link('Log Out', '/users/users/logout');
+    endif; 
+?>
+</div>    
+<?php endif; ?> 

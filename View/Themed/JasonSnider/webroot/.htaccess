@@ -446,10 +446,10 @@ FileETag None
 # https://www.example.com when your cert only allows https://secure.example.com
 # Uncomment the following lines to use this feature.
 
-#<IfModule mod_rewrite.c>
-#  RewriteCond %{SERVER_PORT} !^443
-#  RewriteRule ^ https://example.com%{REQUEST_URI} [R=301,L]
-#</IfModule>
+<IfModule mod_rewrite.c>
+  RewriteCond %{SERVER_PORT} !^443
+  RewriteRule ^ https://example.com%{REQUEST_URI} [R=301,L]
+</IfModule>
 
 
 
