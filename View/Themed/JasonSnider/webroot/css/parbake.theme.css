@@ -1,9 +1,6 @@
 body {
-	font-size: 16px;
-	color: #663300;
-	padding: 0;
-	margin: 60px 0 0;
- 	background: #f3e7d3;
+  min-height: 2000px;
+  padding-top: 70px;
 }
 
 .footer{
@@ -24,18 +21,6 @@ body {
 .error textarea,
 .error select{
     border: 1px solid #b94a48;
-}
-
-.footer{
-	color: #f3e7d3;
-	padding: 1em;
-	background: #740;
-}
-
-.sub-footer{
-	color: #f3e7d3;
-	padding: 1em;
-	background: #630;
 }
 
 /*---------------------- OVERRIDE BOOTSTRAP ---------------------*/
