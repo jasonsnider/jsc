@@ -1,12 +1,31 @@
 <div class="clearfix">
     <div class="content">
-        <h2><?php echo $content['Content']['title']; ?></h2>
-
-        <strong>By: </strong><?php echo $content['CreatedUser']['UserProfile']['display_name']; ?>
-        <strong>On: </strong><?php echo date('m/d/y', strtotime($content['Content']['created'])); ?>
-
-        <div><?php echo $content['Content']['body']; ?></div>
-    
+        <article>
+            <header class="clearfix">
+                <div class="avatar">
+                    <?php 
+                    echo $this->Html->image(
+                        'https://secure.gravatar.com/avatar/57dd069b73a149098c4865f8f5813303.png'
+                    ); 
+                    ?>
+                </div>
+                <div class="meta-data clearfix">
+                    <h2><?php echo $content['Content']['title']; ?></h2>
+                    <strong>By: </strong><?php echo $content['CreatedUser']['UserProfile']['display_name']; ?>
+                    <strong>On: </strong><?php echo date('m/d/y', strtotime($content['Content']['created'])); ?>
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+                        <a class="addthis_button_google_plusone_share"></a>
+                        <a class="addthis_button_twitter"></a>
+                        <a class="addthis_button_facebook"></a>
+                        <a class="addthis_button_pinterest_share"></a>
+                        <a class="addthis_button_linkedin"></a>
+                        <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+                    </div>
+                </div>
+            </header>
+            <?php echo $content['Content']['body']; ?>
+        </article>
         <a name="comments"></a>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
@@ -30,3 +49,8 @@
     </div>
     <div class="sidebar"></div>
 </div>
+
+
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51d73a14248ae2db"></script>
+<!-- AddThis Button END -->

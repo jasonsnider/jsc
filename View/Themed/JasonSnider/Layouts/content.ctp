@@ -80,7 +80,21 @@
                 width: 1140px;
                 background: rgba(187, 68, 0, 0.8);
             }
-
+            
+            article>header .avatar{
+                float: left;
+            }
+            
+            article>header .meta-data{
+                margin-left: 92px;
+                line-height: 32px;
+            }
+            
+            article>header .meta-data>h2{
+                padding: 0;
+                margin: 0;
+            }
+            
             nav a, 
             nav a:link,
             nav a:visited{
