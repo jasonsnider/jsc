@@ -179,6 +179,7 @@
                 margin: 12px 0 0;
             }
         </style>
+        <link rel="author" href="https://plus.google.com/+JasonSnider/posts"/>
     </head>
     <body>
 
