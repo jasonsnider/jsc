@@ -27,7 +27,9 @@
             <?php echo $this->fetch('content'); ?>
 
             <div class="footer text-right">
-            <?php echo $this->Html->link(
+            <?php 
+                $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+                echo $this->Html->link(
                     $this->Html->image('cake.power.gif', 
                     array(
                         'alt' => $cakeDescription, 
