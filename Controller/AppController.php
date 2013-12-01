@@ -114,6 +114,12 @@ class AppController extends Controller {
                 }
             }
         }
+
+		if ($this->name == 'CakeError') {
+            $this->theme = Configure::read('Parbake.Themed.error.theme');
+            $this->layout = Configure::read('Parbake.Themed.error.layout');
+		}
+
     }    
     
     /**
