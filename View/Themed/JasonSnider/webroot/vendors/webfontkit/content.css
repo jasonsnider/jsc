@@ -33,14 +33,9 @@ h2 a:visited{
 
 nav{
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     position:relative;
-    width: 100%;
-    background: rgba(187, 68, 0, 0.8);
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top:0;
+    max-width: 1140px;
 }
 
 nav a, 
@@ -88,7 +83,12 @@ pre{
 }
 
 #Header{
-
+    width: 100%;
+    background: rgba(187, 68, 0, 0.8);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top:0;
 }
 
 #Wrapper{
@@ -154,11 +154,37 @@ pre{
 .content{
     width: 75%; 
     float: left; 
+    padding-right: 6px;
 }
 
+.content>h1{
+    margin-top: 0;
+    padding-top: 0;
+}
 .sidebar{
     width: 25%; 
     float: left; 
+    padding-left: 6px;
+    font-family: 'Rock Salt', "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align :left;
+}
+
+.stalk-me a,
+.stalk-me a:link,
+.stalk-me a:visited{
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 8px;
+    padding: 0 6px;
+    color: rgba(187, 68, 0, 0.8);
+    border-radius: 6px;
+}
+
+.stalk-me a:hover{
+    color: #640;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 /* Calls the fonts for inclusion in the project */
@@ -212,8 +238,27 @@ pre{
         display: block;
         float: none; 
         width: 100%;
-        background: green;
+        padding-top: 12px;
     }
+
+    .stalk-me a,
+    .stalk-me a:link,
+    .stalk-me a:visited{
+        display: block;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 0 8px;
+        padding: 0;
+        color: rgba(187, 68, 0, 0.8);
+        border-radius: 6px;
+    }
+
+    .stalk-me a:hover{
+        color: #640;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */

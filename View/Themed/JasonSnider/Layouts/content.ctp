@@ -24,23 +24,23 @@
         <link rel="author" href="https://plus.google.com/+JasonSnider/posts"/>
     </head>
     <body>
-
-        <div id="Wrapper">
-            <div id="Header">
-                <div style="position:absolute; top: 10px; width: 100%;">
-                    <?php echo $this->Session->flash(); ?>
+        <div id="Header">
+            <nav class="clearfix">
+                <div class="pull-left">
+                    <a href="/" class="brand">Jason Snider</a>
                 </div>
-				
-				<nav class="clearfix">
-                    <div class="pull-left">
-                        <a href="/" class="brand">Jason Snider</a>
-                    </div>
-                    
-                    <div class="pull-right">
-                        <a href="/contents/posts">Blog</a>
-                    </div>
-				</nav>
-			</div>
+
+                <div class="pull-right">
+                    <a href="/contents/posts">Blog</a>
+                </div>
+            </nav>
+            
+            <div style="position:absolute; top: 10px; width: 100%;">
+                <?php echo $this->Session->flash(); ?>
+            </div>
+        </div>
+        <div id="Wrapper">
+
             <?php echo $this->Session->flash(); ?>
             <div id="Content">
                 <?php echo $this->fetch('content'); ?>

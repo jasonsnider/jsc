@@ -32,5 +32,34 @@
     <?php endfor; ?>
     
     </div>
-    <div class="sidebar"></div>
+    <div class="sidebar">
+        <div class="stalk-me">
+            Stalk Me On
+            <!--<a href="https://theprofessional.me/p/jason/" class="XXX"></a>-->
+            <a 
+                href="http://www.linkedin.com/in/jdsnider" 
+                class="icon icon-linkedin" 
+                title="LinkedIn">&nbsp;LinkedIn</a>
+            
+            <a 
+                href="https://twitter.com/jason_snider" 
+                class="icon icon-twitter" 
+                title="Twitter">&nbsp;Twitter</a>
+            
+            <a 
+                href="https://plus.google.com/109232583343515319209/posts" 
+                class="icon icon-google-plus" 
+                title="Google+">&nbsp;Google+</a>
+            
+            <a 
+                href="https://github.com/jasonsnider" 
+                class="icon icon-github-alt" 
+                title="GitHub">&nbsp;GitHub</a>
+            
+            <a 
+                href="http://www.flickr.com/photos/jason-snider/" 
+                class="icon icon-flickr" 
+                title="Flickr">&nbsp;Flickr</a>
+        </div>
+    </div>
 </div>
