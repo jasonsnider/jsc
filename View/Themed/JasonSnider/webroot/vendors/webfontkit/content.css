@@ -169,9 +169,9 @@ pre{
     text-align :left;
 }
 
-.stalk-me a,
-.stalk-me a:link,
-.stalk-me a:visited{
+.sidebar>div>a,
+.sidebar>div>a:link,
+.sidebar>div>a:visited{
     display: block;
     font-size: 16px;
     line-height: 24px;
@@ -179,12 +179,28 @@ pre{
     padding: 0 6px;
     color: rgba(187, 68, 0, 0.8);
     border-radius: 6px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.stalk-me a:hover{
+.sidebar>div>a:hover{
     color: #640;
     font-size: 16px;
     line-height: 24px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.small{
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.love{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    vertical-align: middle;
+    margin: 10px 0;
 }
 
 /* Calls the fonts for inclusion in the project */
@@ -235,28 +251,7 @@ pre{
     }
 
     .sidebar{
-        display: block;
-        float: none; 
-        width: 100%;
-        padding-top: 12px;
-    }
-
-    .stalk-me a,
-    .stalk-me a:link,
-    .stalk-me a:visited{
-        display: block;
-        font-size: 24px;
-        line-height: 32px;
-        margin: 0 0 8px;
-        padding: 0;
-        color: rgba(187, 68, 0, 0.8);
-        border-radius: 6px;
-    }
-
-    .stalk-me a:hover{
-        color: #640;
-        font-size: 24px;
-        line-height: 32px;
+        display: none;
     }
     
 }

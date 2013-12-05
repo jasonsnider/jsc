@@ -49,34 +49,71 @@
     </div>
     <div class="sidebar">
         <div class="stalk-me">
-            Stalk Me On
+            Find Me On
+            <div class="small">
+                Love me or hate me, here is where you can find me.
+            </div>
             <!--<a href="https://theprofessional.me/p/jason/" class="XXX"></a>-->
             <a 
                 href="http://www.linkedin.com/in/jdsnider" 
-                class="icon icon-linkedin" 
-                title="LinkedIn">&nbsp;LinkedIn</a>
+                title="LinkedIn">
+                <span class="icon icon-linkedin">&nbsp;LinkedIn</span>
+            </a>
             
             <a 
                 href="https://twitter.com/jason_snider" 
-                class="icon icon-twitter" 
-                title="Twitter">&nbsp;Twitter</a>
+                title="Twitter">
+                <span class="icon icon-twitter">&nbsp;Twitter
+            </a>
             
             <a 
                 href="https://plus.google.com/109232583343515319209/posts" 
-                class="icon icon-google-plus" 
-                title="Google+">&nbsp;Google+</a>
+                title="Google+">
+                <span class="icon icon-google-plus">&nbsp;Google+
+            </a>
             
             <a 
                 href="https://github.com/jasonsnider" 
-                class="icon icon-github-alt" 
-                title="GitHub">&nbsp;GitHub</a>
+                title="GitHub">
+                <span class="icon icon-github-alt">&nbsp;GitHub
+            </a>
             
             <a 
                 href="http://www.flickr.com/photos/jason-snider/" 
-                class="icon icon-flickr" 
-                title="Flickr">&nbsp;Flickr</a>
+                title="Flickr">
+                <span class="icon icon-flickr">&nbsp;Flickr
+            </a>
         </div>
+        
+        <div class="love">
+            <script data-gittip-username="jasonsnider"
+            data-gittip-widget="button"
+            src="//gttp.co/v1.js"></script>
+            Show Some Love!
+        </div>
+        
+        <div class="referals">
+            Check Em Out!
+            <div class="small">
+                A few referral links, if it's on this list, I'm using it.
+            </div>
+            <a href="https://www.digitalocean.com/?refcode=7d5ded2774f3">DigitalOcean</a>
+            <a href="https://db.tt/EqYs1SYU">Dropbox</a>
+            <a href="https://lastpass.com/f?2219056">LastPass</a>
+        </div>
+        
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Default -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:120px;height:240px"
+             data-ad-client="ca-pub-2297949586762275"
+             data-ad-slot="7769491744"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
     </div>
+    
 </div>
 
 
