@@ -26,26 +26,26 @@ Add the following to the file build
 ````
 #!/bin/sh
  
-# Rebuilds The Parbake Project from it's git repositories
-# Jason D Snider <jason@jasonsnider.com>
+#Rebuilds The Parbake Project from it's git repositories
+#Jason D Snider <jason@jasonsnider.com>
  
-## Start by removing the entire website
+##Start by removing the entire website
 rm -fR /var/www/parbake.org/app 
  
-## Build the code base
-### Install the Tinker code base
+##Build the code base
+###Install the Tinker code base
 cd /var/www/parbake.org && git clone git@github.com:parbake/parbake.git app
 
-### Install the Config directory
+###Install the Config directory
 cd /var/www/parbake.org/app/ && git clone git@github.com:parbake/Config.git Config
 
-### Install the plugins
+###Install the plugins
 cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Contents-plugin.git Contents
 cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Users-plugin.git Users
 cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Utilities-plugin.git Utilities
 cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:jasonsnider/CakePHP-Audit-Log-Plugin.git AuditLog
 
-### Install the vendor libraries
+###Install the vendor libraries
 cd /var/www/parbake.org/app/Vendor/ && git clone git://repo.or.cz/htmlpurifier.git HtmlPurifier
 
 sudo chown www-data:jsnider /var/www/parbake.org/lib/Cake/Cache -fR
