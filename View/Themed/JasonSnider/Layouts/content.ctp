@@ -22,6 +22,7 @@
             echo $this->fetch('script');      
         ?>
         <link rel="author" href="https://plus.google.com/+JasonSnider/posts"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="Header">
