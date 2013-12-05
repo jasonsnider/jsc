@@ -6,31 +6,55 @@ the developer to control the level of continual integration.
 
 To use this as a quick start, simply clone the repository as a CakePHP app directory. 
 
-The following assumes your creating a project called my-project at /var/www adjust these paths and names accordingly. 
+The setup makes the following assumptions
+Your creating a project called parbake.org on the path /var/www/parbake.org
+Your user name is jsnider
+Apache runs as www-data
+
+Adjust these parbake.org, /var/www/parbake.org, jsnider and www-data as needed
 
 ````
 # Create a web directory, this directory needs to have access to a CakePHP library
 cd /var/www
-cd mkdir my-project
-cd my-project
+cd mkdir parbake.org
+cd parbake.org
+touch build
+chmod +x build
 
-# Clone the parbake project
-git clone git@github.com:parbake/parbake.git app
+Add the following to the file build
+````
+#!/bin/sh
+ 
+# Rebuilds The Parbake Project from it's git repositories
+# Jason D Snider <jason@jasonsnider.com>
+ 
+## Start by removing the entire website
+rm -fR /var/www/parbake.org/app 
+ 
+## Build the code base
+### Install the Tinker code base
+cd /var/www/parbake.org && git clone git@github.com:parbake/parbake.git app
 
-# pull the submodules (plugins, themes and vendor directories) into the project
-cd app
-git submodule update --init --recursive
+### Install the Config directory
+cd /var/www/parbake.org/app/ && git clone git@github.com:parbake/Config.git Config
+
+### Install the plugins
+cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Contents-plugin.git Contents
+cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Users-plugin.git Users
+cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Utilities-plugin.git Utilities
+cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:jasonsnider/CakePHP-Audit-Log-Plugin.git AuditLog
+
+### Install the vendor libraries
+cd /var/www/parbake.org/app/Vendor/ && git clone git://repo.or.cz/htmlpurifier.git HtmlPurifier
+
+sudo chown www-data:jsnider /var/www/parbake.org/lib/Cake/Cache -fR
+sudo chown www-data:jsnider /var/www/parbake.org/app/tmp -fR
+sudo chown www-data:jsnider /var/www/parbake.org/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer -fR
 ````
 
-You will want to make Cake/Cache and app/tmp writable by the server, I do this by changing ownership to the Apache 
-(www-data) process and the user group that is responsible for maintaining the web directories (some-user). Server 
-paths, user and groups names will likely vary.
-
 ````
-sudo chown www-data:some-user /var/www/my-project/lib/Cake/Cache -fR
-sudo chown www-data:some-user /var/www/my-project/app/tmp -fR
-
-sudo chown www-data:some-user /var/www/my-project/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer -fR
+#Build the project
+./build
 ````
 
 Create a database called `parbake` and the a username of `root` with the password of `password`. Please note these are 
