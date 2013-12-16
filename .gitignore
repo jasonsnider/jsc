@@ -49,11 +49,4 @@ build/config/buildinfo.properties
 # -------------------------------- Project Specific ---------------------------
 
 tmp
-
 Config
-Plugin/Contents
-Plugin/Users
-Plugin/Utilities
-Plugin/AuditLog
-View/Themed/JasonSnider
-
