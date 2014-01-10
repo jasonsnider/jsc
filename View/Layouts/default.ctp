@@ -49,6 +49,5 @@
         <?php echo $this->Html->script('bootstrap.min'); ?>
         <?php echo $this->element('tinymce'); ?>
         <?php echo $this->Html->script('content_form'); ?>
-        
     </body>
 </html>
