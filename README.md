@@ -1,10 +1,6 @@
 # The Parbake Project
 
-The Parbake Project is CakePHP application comprised of a central app as well as collection of plugins, themes and
-vendor libraries. Each plugin, theme and vendor library is pulled into the project using git submodules. This allows
-the developer to control the level of continual integration. 
-
-To use this as a quick start, simply clone the repository as a CakePHP app directory. 
+Requires CakePHP
 
 The setup makes the following assumptions
 Your creating a project called parbake.org on the path /var/www/parbake.org

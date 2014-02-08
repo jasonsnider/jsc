@@ -10,7 +10,8 @@
             echo $this->Html->meta('icon');
 
             echo $this->Html->css('cake.generic');
-            echo $this->Html->css('bootstrap.min.css');
+            echo $this->Html->css('/vendors/bootstrap/css/bootstrap.min.css');
+            echo $this->Html->css('/vendors/font-awesome/css/font-awesome.min.css');
             echo $this->Html->css('parbake.theme.css');
             echo $this->fetch('meta');
             echo $this->fetch('css');
@@ -46,7 +47,7 @@
             
         </div>
         <?php echo $this->Html->script('jquery/jquery'); ?>
-        <?php echo $this->Html->script('bootstrap.min'); ?>
+        <?php echo $this->Html->script('/vendors/bootstrap/js/bootstrap.min'); ?>
         <?php echo $this->element('tinymce'); ?>
         <?php echo $this->Html->script('content_form'); ?>
     </body>
