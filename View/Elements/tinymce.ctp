@@ -1,5 +1,5 @@
 <?php if(isset($this->request->hasEditor)): ?>
-    <?php echo $this->Html->script('tinymce/tinymce.min'); ?>
+    <?php echo $this->Html->script('/vendors/tinymce/tinymce.min'); ?>
     <script>
         tinymce.init({
             selector: '.editor',

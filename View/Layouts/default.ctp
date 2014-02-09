@@ -46,7 +46,7 @@
             <?php echo $this->element('sql_dump'); ?>
             
         </div>
-        <?php echo $this->Html->script('jquery/jquery'); ?>
+        <?php echo $this->Html->script('/vendors/jquery/jquery'); ?>
         <?php echo $this->Html->script('/vendors/bootstrap/js/bootstrap.min'); ?>
         <?php echo $this->element('tinymce'); ?>
         <?php echo $this->Html->script('content_form'); ?>
