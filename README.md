@@ -5,7 +5,26 @@ quickly. Over the years I have become comfortable with a particular development 
 project encompasses that work flow with my favorite RAD tools. The idea is to quickly launch a web site that can be
 molded into a full blown application. The goal is concept to product as quickly as possible.
 
-Requires CakePHP
+## Requires 
+* CakePHP
+
+## Powered By
+* CakePHP
+* jQuery
+* Twitter Bootstrap
+* HTML5BOILERPLATE
+* HTML Purifier
+* TinyMCE
+
+### Plugins
+* AuditLog
+* Contents
+* Users
+* Utilities
+
+### Submodules
+* Config
+
 
 The setup makes the following assumptions
 Your creating a project called parbake.org on the path /var/www/parbake.org
