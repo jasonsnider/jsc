@@ -1,5 +1,10 @@
 # The Parbake Project
 
+Built on top of CakePHP, jQuery and Twitter-Bootstrap. The Parbake Project helps me launch web applications very 
+quickly. Over the years I have become comfortable with a particular development work flow that involves Git, this 
+project encompasses that work flow with my favorite RAD tools. The idea is to quickly launch a web site that can be
+molded into a full blown application. The goal is concept to product as quickly as possible.
+
 Requires CakePHP
 
 The setup makes the following assumptions
