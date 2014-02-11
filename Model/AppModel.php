@@ -32,4 +32,11 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+	/**
+	 * Defines the behahiors to be used by all models. 
+	 * All models will act as:
+	 * -Containable
+	 * @var array
+	 */
+	public $actsAs = array('Containable');
 }
