@@ -3,10 +3,20 @@ body {
   padding-top: 70px;
 }
 
-.footer{
+div.footer{
+    color: #7F7F7F;
+    font-size: 0.9em;
     border-top: 1px solid #f5f5f5;
     margin-top: 10px;
     padding: 8px 0;
+}
+
+div.footer a,
+div.footer a:link,
+div.footer a:visited,
+div.footer a:hover{
+    color: #7F7F7F;
+    font-weight: bold;
 }
 
 .error-message{
