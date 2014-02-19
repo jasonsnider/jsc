@@ -1,5 +1,5 @@
 <?php if($this->request->isEmployee): ?>
-<div class="management-panel">       
+     
 <?php 
     echo $this->Html->link(
         'Admin',
@@ -62,5 +62,4 @@
         echo $this->Html->link('Log Out', '/users/users/logout');
     endif; 
 ?>
-</div>    
 <?php endif; ?> 

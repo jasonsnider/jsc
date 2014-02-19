@@ -6,7 +6,27 @@ of those projects while maintaining the ability to maintain unique aspects of an
 other projects. The major goal of this project is to provide a starting point for new projects, be a simple website,
 a blog or an original idea. 
 
-Requires CakePHP
+## Requires 
+* CakePHP
+
+## Powered By
+* CakePHP
+* jQuery
+* Twitter Bootstrap
+* HTML5BOILERPLATE
+* HTML Purifier
+* TinyMCE
+
+### Plugins
+* AuditLog
+* Contents
+* Users
+* Utilities
+* Tags
+* Search
+
+### Submodules
+* Config
 
 The setup makes the following assumptions
 Your creating a project called parbake.org on the path /var/www/parbake.org
