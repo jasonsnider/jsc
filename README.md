@@ -1,5 +1,11 @@
 # The Parbake Project
 
+While designed to work out of the box, you should not consider any part of The Parbake Project to be a final 
+implementation. This project was designed to allow me to update common features across multiple projects from any one
+of those projects while maintaining the ability to maintain unique aspects of anyone of those systems independently of 
+other projects. The major goal of this project is to provide a starting point for new projects, be a simple website,
+a blog or an original idea. 
+
 Requires CakePHP
 
 The setup makes the following assumptions
