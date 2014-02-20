@@ -1,15 +1,11 @@
-<div class="paging" style="text-align: center">
-    <?php
-    echo $this->Paginator->first(
-            '&lsaquo; First', array('escape' => false), null, array('class' => 'disabled', 'escape' => false));
-    echo $this->Paginator->prev(
-            '&laquo; Previous', array('escape' => false), null, array('class' => 'disabled', 'escape' => false));
-    echo ' ';
-    echo $this->Paginator->numbers();
-    echo ' ';
-    echo $this->Paginator->next(
-            'Next' . ' &raquo;', array('escape' => false), null, array('class' => 'disabled', 'escape' => false));
-    echo $this->Paginator->last(
-            'Last' . ' &rsaquo;', array('escape' => false), null, array('class' => 'disabled', 'escape' => false));
-    ?>
+<div class="text-center">
+    <div class="pagination pagination-large">
+        <ul class="pagination">
+            <?php
+                echo $this->Paginator->prev(__('prev'), array('tag' => 'li'), null, array('tag' => 'li','class' => 'disabled','disabledTag' => 'a'));
+                echo $this->Paginator->numbers(array('separator' => '','currentTag' => 'a', 'currentClass' => 'active','tag' => 'li','first' => 1));
+                echo $this->Paginator->next(__('next'), array('tag' => 'li','currentClass' => 'disabled'), null, array('tag' => 'li','class' => 'disabled','disabledTag' => 'a'));
+            ?>
+        </ul>
+    </div>
 </div>
