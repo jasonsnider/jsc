@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdoc>
-    <title><![CDATA[The Parbake Project API]]></title>
+    <title><![CDATA[The Parbake Project - API]]></title>
     <parser>
         <target>/var/www/parbake.org/output</target>
     </parser>
     <transformer>
-        <target>/var/www/parbake.org/api</target>
+        <target>/var/www/jasonsnider.com/app/webroot/parbake/api</target>
     </transformer>
     <files>
         <directory>.</directory>
