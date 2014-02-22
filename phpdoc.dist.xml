@@ -5,7 +5,7 @@
         <target>/var/www/parbake.org/output</target>
     </parser>
     <transformer>
-        <target>/var/www/jasonsnider.com/app/webroot/parbake/api</target>
+        <target>/var/www/jasonsnider.com/app/Plugin/Parbake/webroot/api</target>
     </transformer>
     <files>
         <directory>.</directory>
