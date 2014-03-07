@@ -3,10 +3,10 @@
     <script>
         tinymce.init({
             selector: '.editor',
-            content_css : '/theme/parbake/css/editor.css',
-            plugins: 'autoresize, code',
+            content_css : '<?php echo Configure::read('Parbake.Editor.css'); ?>',
+            plugins: 'autoresize, code, spellchecker',
             menubar: false,
-            toolbar: "undo redo | styleselect | bold italic | numlist bullist | code"
+            toolbar: "undo redo | styleselect | bold italic | numlist bullist | code | spellchecker"
         });
     </script>
 <?php endif; ?>
