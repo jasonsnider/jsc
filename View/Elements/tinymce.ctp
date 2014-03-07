@@ -11,6 +11,10 @@
 			browser_spellcheck : true,
 			schema: "html5",
             
+            //Fix for autoresize not firing
+            //http://stackoverflow.com/questions/11265465/tinymce-autoresize-with-chrome-when-readonly/12382834#12382834
+            init_instance_callback: function (inst) { inst.execCommand('mceAutoResize'); },
+            
             //Fix for image src maddness
 			//http://ellislab.com/forums/viewthread/130868/#645748
 			relative_urls : false,
