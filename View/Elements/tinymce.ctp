@@ -3,12 +3,6 @@
     <script>
         tinymce.init({
             
-            setup: function(editor) {
-                editor.on('focus', function(e) {
-                    e.execCommand('mceAutoResize'); 
-                });
-            },
-
             selector: '.editor',
             content_css : '<?php echo Configure::read('Parbake.Editor.css'); ?>',
             plugins: 'autoresize, code, image, link, media',
@@ -17,7 +11,6 @@
             
             auto_resize : true,
 
-            
 			browser_spellcheck : true,
 			schema: "html5",
                         
