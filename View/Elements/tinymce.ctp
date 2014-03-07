@@ -2,6 +2,12 @@
     <?php echo $this->Html->script('/vendors/tinymce/tinymce.min'); ?>
     <script>
         tinymce.init({
+            
+            setup: function(editor) {
+                editor.on('focus', function(e) {
+                    e.execCommand('mceAutoResize'); 
+                });
+            },
 
             selector: '.editor',
             content_css : '<?php echo Configure::read('Parbake.Editor.css'); ?>',
@@ -10,6 +16,8 @@
             toolbar: "undo redo | styleselect | bold italic | numlist bullist | image link media | code",
             
             auto_resize : true,
+
+            
 			browser_spellcheck : true,
 			schema: "html5",
                         
