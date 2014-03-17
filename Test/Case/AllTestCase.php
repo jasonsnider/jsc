@@ -22,19 +22,12 @@
 class AllTestCase extends PHPUnit_Framework_TestSuite {
 
 	/**
-	 * Holds the value of the plugin to be tested
-	 * @var string
-	 */
-	public static $plugin;
-	
-	/**
 	 * Constructor
 	 * - Accepts the $plugin argument from the child constructor and sets that value as the plugin to be tested. 
 	 * - Humanizes and passes a label back to the parent
 	 * @param string $plugin 
 	 */
-	public function __construct($plugin) {
-		self::$plugin = $plugin;
+	public function __construct() {
 		$label = Inflector::humanize(Inflector::underscore(get_class($this)));
 		parent::__construct($label);
 	}
@@ -46,22 +39,9 @@ class AllTestCase extends PHPUnit_Framework_TestSuite {
 	 * @param null $excludes
 	 * @return array
 	 */
-	public static function getTestFiles($directory = null, $excludes = null) {
-		if (is_array($directory)) {
-			$files = array();
-			foreach ($directory as $d) {
-				$files = array_merge($files, self::getTestFiles($d, $excludes));
-			}
-			return array_unique($files);
-		}
-
-		if ($excludes !== null) {
-			$excludes = self::getTestFiles((array)$excludes);
-		}
-		if ($directory === null || $directory !== realpath($directory)) {
-			$basePath = App::pluginPath(self::$plugin) . 'Test' . DS . 'Case' . DS;
-			$directory = str_replace(DS . DS, DS, $basePath . $directory);
-		}
+	public static function getTestFiles($plugin) {
+		
+		$directory = App::pluginPath($plugin) . 'Test' . DS . 'Case' . DS;
 
 		$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
 
@@ -74,8 +54,7 @@ class AllTestCase extends PHPUnit_Framework_TestSuite {
 				if (
 					preg_match('|Test\.php$|', $file) &&
 					$file !== __FILE__ &&
-					!preg_match('|^All.+?\.php$|', basename($file)) &&
-					($excludes === null || !in_array($file, $excludes))
+					!preg_match('|^All.+?\.php$|', basename($file))
 				) {
 					$files[] = $file;
 				}
