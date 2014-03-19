@@ -119,6 +119,11 @@ class AppController extends Controller {
             $this->theme = Configure::read('Parbake.Themed.error.theme');
             $this->layout = Configure::read('Parbake.Themed.error.layout');
 		}
+		
+		if($this->request->prefix == 'admin'){
+            $this->theme = Configure::read('Parbake.Themed.admin.theme');
+            $this->layout = Configure::read('Parbake.Themed.admin.layout');
+		}
 
     }    
     
