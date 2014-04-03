@@ -9,7 +9,7 @@
         <?php
             echo $this->Html->meta('icon');
 
-            echo $this->Html->css('cake.generic');
+            echo $this->Html->css('cake.generic.stripped');
             echo $this->Html->css('/vendors/bootstrap/css/bootstrap.min.css');
             echo $this->Html->css('/vendors/font-awesome/css/font-awesome.min.css');
             echo $this->Html->css('parbake.theme.css');
