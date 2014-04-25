@@ -19,7 +19,7 @@
 			relative_urls : false,
 			remove_script_host : true,
 			document_base_url : "/",
-			convert_urls : true
+			convert_urls : true,
 	
 			//Remove inline styles from copy and paste actions
 			//http://stackoverflow.com/questions/16847324/tinymce-paste-includes-styles
@@ -28,7 +28,7 @@
 			fix_nesting : false,
 			fix_table_elements : false,
 			paste_use_dialog : true,
-			paste_auto_cleanup_on_paste : true,
+			paste_auto_cleanup_on_paste : true
         });
     </script>
 <?php endif; ?>
