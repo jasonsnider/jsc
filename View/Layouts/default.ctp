@@ -49,7 +49,7 @@
 			<?php else: ?>
 					<div class="col-md-12 main">
 			<?php endif; ?>			
-				<?php echo $this->Html->tag('h1', $title_for_layout); ?>		
+				<?php echo $this->Html->tag('h1', $title_for_layout, array('class'=>'header')); ?>		
 				<?php echo $this->Session->flash(); ?>
 				<?php echo $this->fetch('content'); ?>
 			</div>

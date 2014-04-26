@@ -4,11 +4,9 @@ body {
 }
 
 .header{
-    list-style: none;
-    color: #999;
-    font-weight:bold;
+    margin: 0;
+    padding-bottom: 4px;
     border-bottom: 1px solid #bbb;
-    margin-left: -1em;
 }
 
 .sub-header {
