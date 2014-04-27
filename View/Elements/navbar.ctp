@@ -122,6 +122,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
+            <button type="button" class="navbar-toggle pull-left" href="#SideNav" data-toggle="tbs-in">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+			
             <a class="navbar-brand" href="/"><?php echo Configure::read('Parbake.Project.brand'); ?></a>
         </div>
         <div class="navbar-collapse collapse">
