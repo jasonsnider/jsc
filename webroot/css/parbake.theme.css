@@ -4,7 +4,7 @@ body {
 }
 
 .header{
-    margin: 0;
+    margin: 0 0 4px;
     padding-bottom: 4px;
     border-bottom: 1px solid #bbb;
 }
@@ -84,11 +84,40 @@ a.anchor{
     visibility: hidden;
 }
 
+.no-margin{
+    margin: 0;
+}
+
 .divider{
     height: 1px;
     margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5;
+}
+
+/* We don't want search results getting all 
+ * whacky with different sizes of font 
+ */
+.well-result *{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.well-trans{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.well-result *{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.well-trans{
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 div.footer{

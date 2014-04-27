@@ -40,6 +40,8 @@
 				}elseif($this->elementExists($element)){
 					$elementPath = $this->element($element);
 				}
+				
+				echo $this->Html->tag('a', '', array('id'=>'Top', 'class'=>'anchor'));
 			?>
 			<?php if($elementPath): ?>
 				<div class="col-sm-3 col-md-2 sidebar">
@@ -48,7 +50,7 @@
 				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			<?php else: ?>
 					<div class="col-md-12 main">
-			<?php endif; ?>			
+			<?php endif; ?>		
 				<?php echo $this->Html->tag('h1', $title_for_layout, array('class'=>'header')); ?>		
 				<?php echo $this->Session->flash(); ?>
 				<?php echo $this->fetch('content'); ?>
