@@ -50,10 +50,14 @@
 				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			<?php else: ?>
 					<div class="col-md-12 main">
-			<?php endif; ?>		
-				<?php echo $this->Html->tag('h1', $title_for_layout, array('class'=>'header')); ?>		
-				<?php echo $this->Session->flash(); ?>
-				<?php echo $this->fetch('content'); ?>
+			<?php endif; ?>	
+				<?php 
+					if($this->request->showTitle):
+						echo $this->Html->tag('h1', $this->request->title, array('class'=>'header'));
+					endif;
+					echo $this->Session->flash();
+					echo $this->fetch('content'); 
+				?>
 			</div>
 			</div>
 
