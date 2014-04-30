@@ -44,7 +44,7 @@
         $adminNav = array();
 
         if(is_dir($pluginControllers)):
-
+			
             foreach(scandir($pluginControllers) as $directory):
 
                 if(!in_array($directory, array('.', '..', 'Component'))):

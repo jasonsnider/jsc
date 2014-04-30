@@ -27,6 +27,8 @@
 			<div class="row">
 			<?php
 				//[TODO] This should probably be a helper method
+			
+				//Is there a sidebar avilable for this page?
 				$controller = Inflector::camelize($this->request->controller);
 				$action = $this->request->action;
 				
@@ -36,114 +38,44 @@
 				if($this->elementExists($element)){
 					$elementPath = $this->element($element);
 				}
-				
-				echo $this->Html->tag('a', '', array('id'=>'Top', 'class'=>'anchor'));
-				
-				if($elementPath): ?>
-				
-				<div id="SideNav" class="col-sm-3 col-md-2 sidebar">
-					<?php echo $elementPath; ?>
-				</div>
-				
-				<div id="Main" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+				//Load the content for the main display area into a single variable
+				$content = null;
+				$content .= $this->Html->tag('a', '', array('id'=>'Top', 'class'=>'anchor'));
+				if($this->request->showTitle):
+					$content .= $this->Html->tag('h1', $this->request->title, array('class'=>'header'));
+				endif;
+				$content .= $this->Session->flash();
+				$content .= $this->fetch('content');
 					
-			<?php else: ?>
-					<div id="Main" class="col-md-12 main">
-			<?php endif; ?>	
-				<?php 
-					if($this->request->showTitle):
-						echo $this->Html->tag('h1', $this->request->title, array('class'=>'header'));
-					endif;
-					echo $this->Session->flash();
-					echo $this->fetch('content'); 
-				?>
+				//Add the footer
+				$content .= $this->element('footer');
+				
+				//If we found a sidebar load a two column layout, otherwise load a single column.
+				if($elementPath):
+					echo $this->Html->div(
+						'col-sm-3 col-md-2 sidebar', 
+						$elementPath, 
+						array('id'=>'SideNav')
+					);
+					echo $this->Html->div(
+						'col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main', 
+						$content, 
+						array('id'=>'Main')
+					);
+				else:
+					echo $this->Html->div(
+						'col-md-12 main', 
+						$content, 
+						array('id'=>'Main')
+					);
+				endif; 
+			?>
 			</div>
-			</div>
-
-            <div class="footer text-center" role="footer">
-                <div>&copy2012 - <?php echo date('Y'); ?> The Parbake Project</div>
-                <div>
-                    Built by <a href="https://jasonsnider.com" target="_blank">Jason</a> in Chicago
-                    (<?php 
-                        echo $this->Html->link(
-                            'Admin',
-                            '/admin'
-                        );
-                        
-                        if ($this->Session->check('Auth.User')):
-                            if(!empty($this->request->checkForMeta)):
-                                echo ' | ';
-                                echo $this->Html->link(
-                                    'Manage Meta Data',
-                                    array(
-                                        'admin'=>true,
-                                        'controller'=>'meta_data',
-                                        'action'=>'edit',
-                                        $this->request->controller,
-                                        $this->request->action
-                                    )
-
-                                ); 
-
-                            endif;
-
-                            if($this->request->controller == 'posts' && $this->request->action == 'view'):
-                                echo ' | ';
-                                echo $this->Html->link(
-                                    'Manage This Post',
-                                    array(
-                                        'admin'=>true,
-                                        'controller'=>'contents',
-                                        'action'=>'edit',
-                                        $id
-                                    )
-
-                                ); 
-                            endif;
-
-
-
-                            if($this->request->controller == 'pages' && $this->request->action == 'view'):
-                                echo ' | ';
-                                echo $this->Html->link(
-                                    'Manage This Page',
-                                    array(
-                                        'admin'=>true,
-                                        'controller'=>'contents',
-                                        'action'=>'edit',
-                                        $id
-                                    )
-
-                                ); 
-                            endif;
-
-                        
-                            echo ' | ';
-                            echo $this->Html->link('Log Out', '/users/users/logout');
-                        endif; 
-                        
-                        
-                    ?>)
-                </div>
-                <div class="text-right">
-                <?php 
-                    $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-                    echo $this->Html->link(
-                        $this->Html->image('cake.power.gif', 
-                        array(
-                            'alt' => $cakeDescription, 
-                            'title'=> $cakeDescription,
-                            'border' => '0')),
-                        'http://www.cakephp.org/',
-                        array('target' => '_blank', 'escape' => false)
-                    );
-                ?>
-                </div>
-            </div>
         </div>
         <?php echo $this->Html->script('/vendors/jquery/jquery'); ?>
         <?php echo $this->Html->script('/vendors/bootstrap/js/bootstrap.min'); ?>
-		<?php echo $this->Html->script('/parbake'); ?>
+		<?php echo $this->Html->script('parbake'); ?>
         <?php echo $this->element('tinymce'); ?>
 
     </body>
