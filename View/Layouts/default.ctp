@@ -26,28 +26,27 @@
         <div class="container">
 			<div class="row">
 			<?php
-				//[TODO] Improve this implementation
-				$plugin = Inflector::camelize($this->request->plugin);
+				//[TODO] This should probably be a helper method
 				$controller = Inflector::camelize($this->request->controller);
 				$action = $this->request->action;
 				
-				$pluginElement = "{$plugin}.{$controller}/{$action}";
 				$element = "{$controller}/{$action}";
 				$elementPath = null;
-				
-				if($this->elementExists($element)) {
-					$elementPath = $this->element($element);
-				}elseif($this->elementExists($element)){
+								
+				if($this->elementExists($element)){
 					$elementPath = $this->element($element);
 				}
 				
 				echo $this->Html->tag('a', '', array('id'=>'Top', 'class'=>'anchor'));
-			?>
-			<?php if($elementPath): ?>
+				
+				if($elementPath): ?>
+				
 				<div id="SideNav" class="col-sm-3 col-md-2 sidebar">
 					<?php echo $elementPath; ?>
 				</div>
+				
 				<div id="Main" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					
 			<?php else: ?>
 					<div id="Main" class="col-md-12 main">
 			<?php endif; ?>	
@@ -144,7 +143,8 @@
         </div>
         <?php echo $this->Html->script('/vendors/jquery/jquery'); ?>
         <?php echo $this->Html->script('/vendors/bootstrap/js/bootstrap.min'); ?>
-		<?php echo $this->Html->script('parbake'); ?>
+		<?php echo $this->Html->script('/parbake'); ?>
         <?php echo $this->element('tinymce'); ?>
+
     </body>
 </html>
