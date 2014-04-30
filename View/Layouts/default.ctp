@@ -2,10 +2,7 @@
 <html>
     <head>
         <?php echo $this->Html->charset(); ?>
-        <title>
-            The Parbake Project:
-            <?php echo $title_for_layout; ?>
-        </title>
+        <title><?php echo $title_for_layout; ?></title>
         <?php
             echo $this->Html->meta('icon');
 
