@@ -55,5 +55,5 @@ class AdminController extends AdminAppController {
      * The landing page for the admin portal.
      * @return void
      */
-    public function index() {}
+    public function admin_index() {}
 }
