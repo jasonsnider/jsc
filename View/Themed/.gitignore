@@ -1,3 +1,6 @@
 *
 !Default
+!Default/*
+!Default/*/
+!Default/*/*
 !.gitignore
