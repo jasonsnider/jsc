@@ -2,13 +2,14 @@
 <html>
     <head>
         <?php echo $this->Html->charset(); ?>
-        <title><?php echo $title_for_layout; ?></title>
+        <title><?php echo $this->request->title; ?></title>
         <?php
             echo $this->Html->meta('icon');
 
             echo $this->Html->css('cake.generic.stripped');
             echo $this->Html->css('/vendors/bootstrap/css/bootstrap.min.css');
             echo $this->Html->css('/vendors/font-awesome/css/font-awesome.min.css');
+			echo $this->Html->css('/vendors/bootstrap-datepicker/css/datepicker3');
             echo $this->Html->css('parbake.theme.css');
             echo $this->fetch('meta');
             echo $this->fetch('css');
@@ -40,7 +41,7 @@
 				$content = null;
 				$content .= $this->Html->tag('a', '', array('id'=>'Top', 'class'=>'anchor'));
 				if($this->request->showTitle):
-					$content .= $this->Html->tag('h1', $this->request->title, array('class'=>'header'));
+					$content .= $this->Html->tag('h1', $this->request->title);
 				endif;
 				$content .= $this->Session->flash();
 				$content .= $this->fetch('content');
@@ -72,8 +73,13 @@
         </div>
         <?php echo $this->Html->script('/vendors/jquery/jquery'); ?>
         <?php echo $this->Html->script('/vendors/bootstrap/js/bootstrap.min'); ?>
+		<?php echo $this->Html->script('/vendors/bootstrap-datepicker/js/bootstrap-datepicker'); ?>
 		<?php echo $this->Html->script('parbake'); ?>
         <?php echo $this->element('tinymce'); ?>
-
+		<script>
+			$(function() {
+				$('input.datepicker').datepicker();
+			});
+		</script>
     </body>
 </html>
