@@ -32,6 +32,11 @@ var Parbake = (function() {
             event.preventDefault();
             return Parbake.sideNav();
         });
+        
+        $(document).on('click.data-api', '[data-toggle=offcanvas]', function (event) {
+            event.preventDefault();
+            $('.row-offcanvas').toggleClass('active');
+        });
 
     });
     
