@@ -31,7 +31,7 @@
 						'Manage This Post',
 						array(
 							'admin'=>true,
-							'controller'=>'contents',
+							'controller'=>'posts',
 							'action'=>'edit',
 							$id
 						)
@@ -47,7 +47,7 @@
 						'Manage This Page',
 						array(
 							'admin'=>true,
-							'controller'=>'contents',
+							'controller'=>'pages',
 							'action'=>'edit',
 							$id
 						)
