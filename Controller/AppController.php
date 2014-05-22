@@ -28,8 +28,12 @@ App::uses('Controller', 'Controller');
  * Add your application-wide methods in the class below, your controllers
  * will inherit them.
  *
- * @package		app.Controller
- * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
+ * @property Auth $Auth
+ * @property Authorize $Authorize
+ * @property SecurityComponent $Security
+ * @property SessionComponent $Session
+ * @author Jason D Snider <jason@jasonsnider.com>
+ * @package app
  */
 class AppController extends Controller {
 
@@ -81,17 +85,17 @@ class AppController extends Controller {
      * @return void
      */
     public function setTheme(){
-        if(Configure::check('Parbake.Themed.default')){
-            $this->theme = Configure::read('Parbake.Themed.default');
+        if(Configure::check('JSC.Themed.default')){
+            $this->theme = Configure::read('JSC.Themed.default');
         }
 
         //Set path segments to allow for easy reuse and improved readability
-        $root = 'Parbake.Themed.Controller';
+        $root = 'JSC.Themed.Controller';
         $controller = $this->request->controller;
         $action = $this->request->action;
         
         //Check the config file for controller specific themes
-        if(Configure::check('Parbake.Themed.Controller')){
+        if(Configure::check('JSC.Themed.Controller')){
             //Is the current controller named?
             if(array_key_exists($controller, Configure::read($root))){
                 //Is the current action named
@@ -116,13 +120,13 @@ class AppController extends Controller {
         }
 
 		if ($this->name == 'CakeError') {
-            $this->theme = Configure::read('Parbake.Themed.error.theme');
-            $this->layout = Configure::read('Parbake.Themed.error.layout');
+            $this->theme = Configure::read('JSC.Themed.error.theme');
+            $this->layout = Configure::read('JSC.Themed.error.layout');
 		}
 		
 		if($this->request->prefix == 'admin'){
-            $this->theme = Configure::read('Parbake.Themed.admin.theme');
-            $this->layout = Configure::read('Parbake.Themed.admin.layout');
+            $this->theme = Configure::read('JSC.Themed.admin.theme');
+            $this->layout = Configure::read('JSC.Themed.admin.layout');
 		}
 
     }    

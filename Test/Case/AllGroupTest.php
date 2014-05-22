@@ -1,17 +1,17 @@
 <?php
 /**
- * Executes all test cases for The Parbake Project excluding third party plugins
+ * Executes all test cases for JSC excluding third party plugins
  * Excludes
  * -AuditLog
  * -DebugKit
  * -Search
  * -Tags
  */
-//Call Parbake's AllTestCase
+//Call JSC's AllTestCase
 require_once 'AllTestCase.php';
 
 /**
- * Executes all test cases for The Parbake Project excluding third party plugins
+ * Executes all test cases for JSC excluding third party plugins
  * Excludes
  * -AuditLog
  * -DebugKit

@@ -10,7 +10,7 @@
             echo $this->Html->css('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css');
             echo $this->Html->css('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
 			echo $this->Html->css('/vendors/bootstrap-datepicker/css/datepicker3');
-            echo $this->Html->css('parbake.theme.css');
+            echo $this->Html->css('jsc.theme.css');
             echo $this->fetch('meta');
             echo $this->fetch('css');
             echo $this->fetch('script');
@@ -74,7 +74,7 @@
         <?php echo $this->Html->script('//code.jquery.com/jquery-1.11.0.min.js'); ?>
         <?php echo $this->Html->script('//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'); ?>
 		<?php echo $this->Html->script('/vendors/bootstrap-datepicker/js/bootstrap-datepicker'); ?>
-		<?php echo $this->Html->script('parbake'); ?>
+		<?php echo $this->Html->script('jsc'); ?>
         <?php echo $this->element('tinymce'); ?>
 		<script>
 			$(function() {

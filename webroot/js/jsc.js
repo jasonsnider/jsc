@@ -1,8 +1,8 @@
 /**
- * Provides basic Parbake functionality using the module pattern 
+ * Provides basic JSC functionality using the module pattern 
  * @type {ObjectLiteral}
  */
-var Parbake = (function() {
+var JSC = (function() {
     "use strict"; /*jslint browser:true */
     return{
         /**
@@ -30,7 +30,7 @@ var Parbake = (function() {
 /*
         $(document).on('click.data-api', '[data-toggle="tbs-in"]', function (event) {
             event.preventDefault();
-            return Parbake.sideNav();
+            return JSC.sideNav();
         });
         */
         $(document).on('click.data-api', '[data-toggle=offcanvas]', function (event) {

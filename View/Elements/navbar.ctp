@@ -115,7 +115,7 @@
         
 ?>
 <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <i class="fa fa-navicon"></i>
@@ -124,7 +124,7 @@
             <button type="button" class="navbar-toggle"  data-toggle="offcanvas">
                 <i class="fa fa-th-large"></i>
             </button>
-            <a class="navbar-brand" href="/"><?php echo Configure::read('Parbake.Project.brand'); ?></a>
+            <a class="navbar-brand" href="/"><?php echo Configure::read('JSC.Project.brand'); ?></a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

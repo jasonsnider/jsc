@@ -233,6 +233,11 @@ div.footer a:hover{
 }
     
 
+button.navbar-toggle{
+	color: #999;
+	background: #444;
+}
+
 /*
  * Off Canvas
  * --------------------------------------------------

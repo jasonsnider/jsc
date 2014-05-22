@@ -1,10 +1,10 @@
-# The Parbake Project
+# JSC
 
-While designed to work out of the box, you should not consider any part of The Parbake Project to be a final 
-implementation. This project was designed to allow me to update common features across multiple projects from any one
-of those projects while maintaining the ability to maintain unique aspects of anyone of those systems independently of 
-other projects. The major goal of this project is to provide a starting point for new projects, be a simple website,
-a blog or an original idea. 
+I built JSC as the engine on which to run jasonsnider.com. While designed to work out of the box, you should not 
+consider any part of JSC to be a final implementation. This project was designed to allow me to update common features 
+across multiple projects from any one of those projects while maintaining the ability to maintain unique aspects of 
+anyone of those systems independently of other projects. The major goal of this project is to provide a starting point 
+for new projects, be a simple website, a blog or an original idea. 
 
 ## Requires 
 * CakePHP
@@ -24,22 +24,20 @@ a blog or an original idea.
 * Utilities
 * Tags
 * Search
-
-### Submodules
 * Config
 
 The setup makes the following assumptions
-Your creating a project called parbake.org on the path /var/www/parbake.org
+Your creating a project called jsc.org on the path /var/www/jsc.org
 Your user name is jsnider
 Apache runs as www-data
 
-Adjust these parbake.org, /var/www/parbake.org, jsnider and www-data as needed
+Adjust these jsc.org, /var/www/jsc.org, jsnider and www-data as needed
 
 ````
 # Create a web directory, this directory needs to have access to a CakePHP library
 cd /var/www
-cd mkdir parbake.org
-cd parbake.org
+cd mkdir jsc.org
+cd jsc.org
 touch build
 chmod +x build
 ````
@@ -48,31 +46,31 @@ Add the following to the file build
 ````
 #!/bin/sh
  
-#Rebuilds The Parbake Project from it's git repositories
+#Rebuilds JSC from it's git repositories
 #Jason D Snider <jason@jasonsnider.com>
  
 ##Start by removing the entire website
-rm -fR /var/www/parbake.org/app 
+rm -fR /var/www/jsc.org/app 
  
 ##Build the code base
 ###Install the Tinker code base
-cd /var/www/parbake.org && git clone git@github.com:parbake/parbake.git app
+cd /var/www/jsc.org && git clone git@github.com:jsc/jsc.git app
 
 ###Install the Config directory
-cd /var/www/parbake.org/app/ && git clone git@github.com:parbake/Config.git Config
+cd /var/www/jsc.org/app/ && git clone git@github.com:jsc/Config.git Config
 
 ###Install the plugins
-cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Contents-plugin.git Contents
-cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Users-plugin.git Users
-cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:parbake/Utilities-plugin.git Utilities
-cd /var/www/parbake.org/app/Plugin/ && git clone git@github.com:jasonsnider/CakePHP-Audit-Log-Plugin.git AuditLog
+cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jsc/Contents-plugin.git Contents
+cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jsc/Users-plugin.git Users
+cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jsc/Utilities-plugin.git Utilities
+cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jasonsnider/CakePHP-Audit-Log-Plugin.git AuditLog
 
 ###Install the vendor libraries
-cd /var/www/parbake.org/app/Vendor/ && git clone git://repo.or.cz/htmlpurifier.git HtmlPurifier
+cd /var/www/jsc.org/app/Vendor/ && git clone git://repo.or.cz/htmlpurifier.git HtmlPurifier
 
-sudo chown www-data:jsnider /var/www/parbake.org/lib/Cake/Cache -fR
-sudo chown www-data:jsnider /var/www/parbake.org/app/tmp -fR
-sudo chown www-data:jsnider /var/www/parbake.org/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer -fR
+sudo chown www-data:jsnider /var/www/jsc.org/lib/Cake/Cache -fR
+sudo chown www-data:jsnider /var/www/jsc.org/app/tmp -fR
+sudo chown www-data:jsnider /var/www/jsc.org/app/Vendor/HtmlPurifier/library/HTMLPurifier/DefinitionCache/Serializer -fR
 ````
 
 ````
@@ -80,7 +78,7 @@ sudo chown www-data:jsnider /var/www/parbake.org/app/Vendor/HtmlPurifier/library
 ./build
 ````
 
-Create a database called `parbake` and the a username of `root` with the password of `password`. Please note these are 
+Create a database called `jsc` and the a username of `root` with the password of `password`. Please note these are 
 simple default settings and are for local development only, for production you MUST change these values.
 
 ## Request Object Extensions

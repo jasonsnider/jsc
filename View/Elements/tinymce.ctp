@@ -4,7 +4,7 @@
         tinymce.init({
             
             selector: '.editor',
-            content_css : '<?php echo Configure::read('Parbake.Editor.css'); ?>',
+            content_css : '<?php echo Configure::read('JSC.Editor.css'); ?>',
             plugins: 'autoresize, code, image, link, media, paste',
             menubar: false,
             toolbar: "undo redo | styleselect | bold italic | numlist bullist | image link media | pastetext | code",

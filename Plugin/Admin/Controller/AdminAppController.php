@@ -2,7 +2,7 @@
 /**
  * A entry point for the notion of an admin portal
  *
- * Parbake (http://jasonsnider.com)
+ * JSC (http://jasonsnider.com)
  * Copyright 2013, Jason D Snider. (http://jasonsnider.com)
  *
  * Licensed under The MIT License
@@ -18,7 +18,7 @@ App::uses('AppController', 'Controller');
  * A entry point for the notion of an admin portal
  *
  * @author Jason D Snider <jason@jasonsnider.com>
- * @package Parbake
+ * @package JSC
  */
 class AdminAppController extends AppController {	
     /**

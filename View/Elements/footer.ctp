@@ -1,5 +1,5 @@
 <div class="footer text-center" role="footer">
-	<div>&copy2012 - <?php echo date('Y'); ?> The Parbake Project</div>
+	<div>&copy2012 - <?php echo date('Y'); ?> JSC</div>
 	<div>
 		Built by <a href="https://jasonsnider.com" target="_blank">Jason</a> in Chicago
 		(<?php 
