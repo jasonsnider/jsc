@@ -7,8 +7,8 @@
             echo $this->Html->meta('icon');
 
             echo $this->Html->css('cake.generic.stripped');
-            echo $this->Html->css('/vendors/bootstrap/css/bootstrap.min.css');
-            echo $this->Html->css('/vendors/font-awesome/css/font-awesome.min.css');
+            echo $this->Html->css('//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css');
+            echo $this->Html->css('//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
 			echo $this->Html->css('/vendors/bootstrap-datepicker/css/datepicker3');
             echo $this->Html->css('parbake.theme.css');
             echo $this->fetch('meta');
@@ -20,9 +20,8 @@
     <body>
         
         <?php echo $this->element('navbar'); ?>
-
         <div class="container">
-			<div class="row">
+			<div class="row row-offcanvas row-offcanvas-left">
 			<?php
 				//[TODO] This should probably be a helper method
 			
@@ -36,34 +35,35 @@
 				if($this->elementExists($element)){
 					$elementPath = $this->element($element);
 				}
-
+				
 				//Load the content for the main display area into a single variable
 				$content = null;
 				$content .= $this->Html->tag('a', '', array('id'=>'Top', 'class'=>'anchor'));
 				if($this->request->showTitle):
 					$content .= $this->Html->tag('h1', $this->request->title);
 				endif;
+
 				$content .= $this->Session->flash();
 				$content .= $this->fetch('content');
 					
 				//Add the footer
 				$content .= $this->element('footer');
-				
+			
 				//If we found a sidebar load a two column layout, otherwise load a single column.
 				if($elementPath):
 					echo $this->Html->div(
-						'col-sm-3 col-md-2 sidebar', 
+						'col-xs-6 col-sm-3 sidebar sidebar-offcanvas', 
 						$elementPath, 
 						array('id'=>'SideNav')
 					);
 					echo $this->Html->div(
-						'col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main', 
+						'col-xs-12 col-sm-9 main col-sm-offset-3', 
 						$content, 
 						array('id'=>'Main')
 					);
 				else:
 					echo $this->Html->div(
-						'col-md-12 main', 
+						'col-xs-12 main', 
 						$content, 
 						array('id'=>'Main')
 					);
@@ -71,8 +71,8 @@
 			?>
 			</div>
         </div>
-        <?php echo $this->Html->script('/vendors/jquery/jquery'); ?>
-        <?php echo $this->Html->script('/vendors/bootstrap/js/bootstrap.min'); ?>
+        <?php echo $this->Html->script('//code.jquery.com/jquery-1.11.0.min.js'); ?>
+        <?php echo $this->Html->script('//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'); ?>
 		<?php echo $this->Html->script('/vendors/bootstrap-datepicker/js/bootstrap-datepicker'); ?>
 		<?php echo $this->Html->script('parbake'); ?>
         <?php echo $this->element('tinymce'); ?>

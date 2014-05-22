@@ -27,12 +27,12 @@ var Parbake = (function() {
 (function ($){
     "use strict"; /*jslint browser:true */
     $(function () {
-
+/*
         $(document).on('click.data-api', '[data-toggle="tbs-in"]', function (event) {
             event.preventDefault();
             return Parbake.sideNav();
         });
-        
+        */
         $(document).on('click.data-api', '[data-toggle=offcanvas]', function (event) {
             event.preventDefault();
             $('.row-offcanvas').toggleClass('active');
