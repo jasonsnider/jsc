@@ -8,6 +8,10 @@ h1{
     padding-top: 0;
 }
 
+pre{
+	box-shadow: none;
+}
+
 .header{
     margin: 0 0 10px;
 }
