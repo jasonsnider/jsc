@@ -1,5 +1,5 @@
 <?php if(isset($this->request->hasEditor)): ?>
-    <?php echo $this->Html->script('/vendors/tinymce/tinymce.min'); ?>
+	<?php echo $this->Html->script('//tinymce.cachefly.net/4.0/tinymce.min.js'); ?>
     <script>
         tinymce.init({
             
