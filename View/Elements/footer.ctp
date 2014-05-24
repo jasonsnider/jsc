@@ -11,19 +11,35 @@
 			if ($this->Session->check('Auth.User')):
 				if(!empty($this->request->checkForMeta)):
 					echo ' | ';
-					echo $this->Html->link(
-						'Manage Meta Data',
-						array(
-							'admin'=>true,
-							'plugin'=>'contents',
-							'controller'=>'meta_data',
-							'action'=>'edit',
-							$this->request->controller,
-							$this->request->action
-						)
 
-					); 
+					if(empty($this->request->title)):
+						echo $this->Html->link(
+							'Add Meta Data',
+							array(
+								'admin'=>true,
+								'plugin'=>'contents',
+								'controller'=>'meta_data',
+								'action'=>'add',
+								$this->request->controller,
+								$this->request->action
+							)
 
+						);
+					else:
+						echo $this->Html->link(
+							'Edit Meta Data',
+							array(
+								'admin'=>true,
+								'plugin'=>'contents',
+								'controller'=>'meta_data',
+								'action'=>'edit',
+								$this->request->controller,
+								$this->request->action
+							)
+
+						); 
+					endif;
+					
 				endif;
 
 				if($this->request->controller == 'posts' && $this->request->action == 'view'):
