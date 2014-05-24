@@ -12,7 +12,22 @@
 				if(!empty($this->request->checkForMeta)):
 					echo ' | ';
 
-					if(empty($this->request->title)):
+					if($this->request->hasMeta):
+						echo $this->Html->link(
+							'Edit Meta Data',
+							array(
+								'admin'=>true,
+								'plugin'=>'contents',
+								'controller'=>'meta_data',
+								'action'=>'edit',
+								$this->request->controller,
+								$this->request->action
+							)
+
+						);
+					
+					else:
+						
 						echo $this->Html->link(
 							'Add Meta Data',
 							array(
@@ -25,19 +40,7 @@
 							)
 
 						);
-					else:
-						echo $this->Html->link(
-							'Edit Meta Data',
-							array(
-								'admin'=>true,
-								'plugin'=>'contents',
-								'controller'=>'meta_data',
-								'action'=>'edit',
-								$this->request->controller,
-								$this->request->action
-							)
 
-						); 
 					endif;
 					
 				endif;
