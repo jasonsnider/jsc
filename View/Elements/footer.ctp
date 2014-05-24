@@ -15,6 +15,7 @@
 						'Manage Meta Data',
 						array(
 							'admin'=>true,
+							'plugin'=>'contents',
 							'controller'=>'meta_data',
 							'action'=>'edit',
 							$this->request->controller,
