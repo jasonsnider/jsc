@@ -12,7 +12,7 @@
 				if(!empty($this->request->checkForMeta)):
 					echo ' | ';
 
-					if($this->request->hasMeta):
+					if($this->request->MetaData):
 						echo $this->Html->link(
 							'Edit Meta Data',
 							array(
@@ -20,8 +20,7 @@
 								'plugin'=>'contents',
 								'controller'=>'meta_data',
 								'action'=>'edit',
-								$this->request->controller,
-								$this->request->action
+								$this->request->MetaData['id']
 							)
 
 						);
