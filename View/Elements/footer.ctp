@@ -12,7 +12,7 @@
 				if(!empty($this->request->checkForMeta)):
 					echo ' | ';
 
-					if($this->request->MetaData):
+					if(!empty($this->request->MetaData)):
 						echo $this->Html->link(
 							'Edit Meta Data',
 							array(
