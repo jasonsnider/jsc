@@ -82,6 +82,7 @@ class AppController extends Controller {
     
     /**
      * Sets the theme to a Configured value
+	 * @todo - Refactor
      * @return void
      */
     public function setTheme(){
@@ -98,7 +99,26 @@ class AppController extends Controller {
         if(Configure::check('JSC.Themed.Controller')){
             //Is the current controller named?
             if(array_key_exists($controller, Configure::read($root))){
-                //Is the current action named
+				
+				//If we see a wild card for a controller set that against all controlle actions
+				if(array_key_exists('*', Configure::read("{$root}.{$controller}"))){
+
+					//Set the theme and layout paths for easy reuse and improved readability
+					$themePath = "{$root}.{$controller}.*.theme";
+					$layoutPath = "{$root}.{$controller}.*.layout";
+					
+					//Set the controller/action specific theme
+					if(Configure::check($themePath)){
+						$this->theme = Configure::read($themePath);
+					}
+
+					//Set the controller/action specific layout
+					if(Configure::check($layoutPath)){
+						$this->layout = Configure::read($layoutPath);
+					}
+				}
+				
+                //Is the current action named? if so set those values (overrides wildcard setting)
                 if(array_key_exists($action, Configure::read("{$root}.{$controller}"))){
                         
                         //Set the theme and layout paths for easy reuse and improved readability
