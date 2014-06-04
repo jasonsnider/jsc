@@ -91,8 +91,6 @@ of the CMS functionality.
 
 Usage
 ````
-# Set
-$this->request->checkForMeta = true;
 
 # Get
 if($this->request->isEmployee){

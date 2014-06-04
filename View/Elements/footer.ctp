@@ -2,46 +2,45 @@
 	<div>&copy2012 - <?php echo date('Y'); ?> JSC</div>
 	<div>
 		Built by <a href="https://jasonsnider.com" target="_blank">Jason</a> in Chicago
-		(<?php 
+		(<?php 						
 			echo $this->Html->link(
 				'Admin',
 				'/admin'
 			);
 
 			if ($this->Session->check('Auth.User')):
-				if(!empty($this->request->checkForMeta)):
-					echo ' | ';
+				echo ' | ';
 
-					if(!empty($this->request->MetaData)):
-						echo $this->Html->link(
-							'Edit Meta Data',
-							array(
-								'admin'=>true,
-								'plugin'=>'contents',
-								'controller'=>'meta_data',
-								'action'=>'edit',
-								$this->request->MetaData['id']
-							)
+				if(!empty($this->request->MetaData)):
+					echo $this->Html->link(
+						'Edit Meta Data',
+						array(
+							'admin'=>true,
+							'plugin'=>'contents',
+							'controller'=>'meta_data',
+							'action'=>'edit',
+							$this->request->MetaData['id']
+						)
 
-						);
-					
-					else:
-						
-						echo $this->Html->link(
-							'Add Meta Data',
-							array(
-								'admin'=>true,
-								'plugin'=>'contents',
-								'controller'=>'meta_data',
-								'action'=>'add',
-								$this->request->controller,
-								$this->request->action
-							)
+					);
 
-						);
+				else:
 
-					endif;
-					
+					echo $this->Html->link(
+						'Add Meta Data',
+						array(
+							'admin'=>true,
+							'plugin'=>'contents',
+							'controller'=>'meta_data',
+							'action'=>'add',
+							(isset($this->request->plugin)?$this->request->plugin:null),
+							$this->request->controller,
+							$this->request->action,
+							(isset($this->request->params['pass'][0])?$this->request->params['pass'][0]:null)
+						)
+
+					);
+
 				endif;
 
 				if($this->request->controller == 'posts' && $this->request->action == 'view'):
