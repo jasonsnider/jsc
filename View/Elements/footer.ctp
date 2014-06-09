@@ -89,7 +89,10 @@
 			array(
 				'alt' => $cakeDescription, 
 				'title'=> $cakeDescription,
-				'border' => '0')),
+				'border' => '0',
+				'width'=>'98px',
+				'height'=>'13px'
+			)),
 			'http://www.cakephp.org/',
 			array('target' => '_blank', 'escape' => false)
 		);
