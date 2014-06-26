@@ -13,14 +13,14 @@
  * @license MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @package	Contents
  */
-App::uses('AppController', 'Controller');
+App::uses('JscAppController', 'Jsc.Controller');
 /**
  * A entry point for the notion of an admin portal
  *
  * @author Jason D Snider <jason@jasonsnider.com>
  * @package JSC
  */
-class AdminAppController extends AppController {	
+class AdminAppController extends JscAppController {	
     /**
      * Called before action
      */
