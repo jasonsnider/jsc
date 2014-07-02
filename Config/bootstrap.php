@@ -111,10 +111,10 @@ CakeLog::config('error', array(
 CakePlugin::loadAll(array(
     'Config' => array(
 		'bootstrap' => array(
+			'core',
 			'bootstrap',
 			'email',
-			'database',
-			'core'
+			'database'
 		),
 		'routes'=>true,
 		
