@@ -54,15 +54,15 @@ rm -fR /var/www/jsc.org/app
  
 ##Build the code base
 ###Install the Tinker code base
-cd /var/www/jsc.org && git clone git@github.com:jsc/jsc.git app
+cd /var/www/jsc.org && git clone git@github.com:jasonsnider/jsc.git app
 
 ###Install the Config directory
-cd /var/www/jsc.org/app/ && git clone git@github.com:jsc/Config.git Config
+cd /var/www/jsc.org/app/ && git clone git@github.com:jasonsnider/Config.git Config
 
 ###Install the plugins
-cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jsc/Contents-plugin.git Contents
-cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jsc/Users-plugin.git Users
-cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jsc/Utilities-plugin.git Utilities
+cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jasonsnider/Contents-plugin.git Contents
+cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jasonsnider/Users-plugin.git Users
+cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jasonsnider/Utilities-plugin.git Utilities
 cd /var/www/jsc.org/app/Plugin/ && git clone git@github.com:jasonsnider/CakePHP-Audit-Log-Plugin.git AuditLog
 
 ###Install the vendor libraries
